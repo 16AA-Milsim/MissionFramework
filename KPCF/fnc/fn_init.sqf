@@ -10,8 +10,6 @@
 
     Dependencies:
         * KPGUI
-*/
-KP_cratefiller_whitelist = [
     "76561198042251903",    //Mueller, DEBUG purposes
     "76561198059979416",    //Scarle, RLC
     "76561197995574213",    //Webster?, 13AASR
@@ -20,6 +18,16 @@ KP_cratefiller_whitelist = [
     "76561198181678883",    //Keeling, 13AASR
     "76561198284837766",    //Beake, CSMR 
     "76561198044241930",    //Tasner, CSMR
+*/
+KP_cratefiller_whitelist = [
+    "76561198042251903",
+    "76561198059979416",
+    "76561197995574213",
+    "76561197970597319",
+    "76561198306446879",
+    "76561198181678883",
+    "76561198284837766", 
+    "76561198044241930"
 
 ];
 diag_log text "-------------------------[DEBUG - KP Cratefiller STARTED]-------------------------";
