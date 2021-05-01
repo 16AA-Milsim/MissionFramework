@@ -1,0 +1,32 @@
+// load screen
+onLoadName = "SOME NAME HERE";
+onLoadMission = "Location: MAP";
+Author = "YOUR NAME CUNT";
+
+// mission attributes
+disabledAI = 1;					//no AI in player slots
+enableDebugConsole = 1;			//makes sure Admin can unfuck stuff, don't touch
+disableChannels[]={0,2,5,6};	//disable command, direct and system channels
+
+// respawn
+respawn = "BASE";				//respawn on marker role name "respawn_west"
+respawndelay = 6;				//I'm sure you can figure that one out
+
+class Header
+{
+	gameType = COOP; 			//game type
+	minPlayers = 1; 			//min # of players the mission supports
+	maxPlayers = 144; 			//max # of players the mission supports
+};
+
+
+//=====Load Scripts|DO NOT ALTER=====//
+#include "taw_vd\GUI.h"					//view distance script
+#include "KPGUI\KPGUI_defines.hpp"		//KP Cratefiller
+#include "KPCF\ui\KPCF_dialog.hpp"		//KP Cratefiller
+
+class CfgFunctions
+{
+	#include "taw_vd\cfgfunctions.hpp"	//view distance script
+  	#include "KPCF\KPCF_functions.hpp"	//KP Cratefiller
+};
