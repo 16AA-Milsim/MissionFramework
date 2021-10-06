@@ -1,32 +1,44 @@
 // load screen
-onLoadName = "SOME NAME HERE";
-onLoadMission = "Location: MAP";
-Author = "YOUR NAME CUNT";
+onLoadName = "HIDDEN TRIGGER V";
+onLoadMission = "SANGIN";
+Author = "Rabbit&Keeling";
+loadScreen = "images\logo.jpg";
+overviewPicture = "images\logo.jpg";
 
 // mission attributes
-disabledAI = 1;					//no AI in player slots
-enableDebugConsole = 1;			//makes sure Admin can unfuck stuff, don't touch
+disabledAI = 1;
+enableDebugConsole = 1;
 disableChannels[]={0,2,5,6};	//disable command, direct and system channels
 
 // respawn
-respawn = "BASE";				//respawn on marker role name "respawn_west"
-respawndelay = 6;				//I'm sure you can figure that one out
+respawn = "BASE";
+respawndelay = 6;
 
 class Header
 {
-	gameType = COOP; 			//game type
-	minPlayers = 1; 			//min # of players the mission supports
-	maxPlayers = 144; 			//max # of players the mission supports
+	gameType = COOP; //game type
+	minPlayers = 1; //min # of players the mission supports
+	maxPlayers = 144; //max # of players the mission supports
 };
 
-
-//=====Load Scripts|DO NOT ALTER=====//
-#include "taw_vd\GUI.h"					//view distance script
-#include "KPGUI\KPGUI_defines.hpp"		//KP Cratefiller
-#include "KPCF\ui\KPCF_dialog.hpp"		//KP Cratefiller
+//=====Load Scripts
+#include "taw_vd\GUI.h"
+#include "KPGUI\KPGUI_defines.hpp"
+#include "KPCF\ui\KPCF_dialog.hpp"
 
 class CfgFunctions
 {
-	#include "taw_vd\cfgfunctions.hpp"	//view distance script
-  	#include "KPCF\KPCF_functions.hpp"	//KP Cratefiller
+	#include "taw_vd\cfgfunctions.hpp"
+  	#include "KPCF\KPCF_functions.hpp"
+};
+
+class CfgSounds
+{
+ sounds[] = {};
+ class tic
+ {
+  name = "tic";
+  sound[] = {"\sounds\tic.ogg", 300, 1};
+  titles[] = {0,""};
+ };
 };

@@ -1,7 +1,6 @@
 //anything in here gets executed on all clients+server on mission start
 if (!isDedicated && !hasInterface && isMultiplayer) then { //anything in here gets executed on the headless clients
-    //excute show FPS marker
-    [] execVM "scripts\show_fps.sqf";
+    [] execVM "scripts\show_fps.sqf";   //excute show FPS marker
     diag_log text "--------------------[Executed show_fps on HC]--------------------"; //this will only show in  the HCs logs
 };
 
@@ -17,10 +16,10 @@ tawvd_object = tawvd_foot;
 sleep 0.1; //to make sure the following takes effect, see BIS wiki
 enableEnvironment [false, true];
 
-// Executes the join in progress script for Zeus users
-if ((isDedicated || !hasInterface) && isMultiplayer) exitwith{}; /* no need to continue on HC or Dedicated Server */
-0 = [] spawn compile preprocessFileLineNumbers "scripts\jipZeus.sqf";
-//ANYTHING AFTER HERE ONLY GETS EXECUTED ON PLAYER MACHINES
+if (hasInterface) then {//excuted only on players
+    0 = [] spawn compile preprocessFileLineNumbers "scripts\jipZeus.sqf"; //executes Join In Progress Zeus script
+};
+
 
 // Friendly fire safe check
 player addrating 90000;
