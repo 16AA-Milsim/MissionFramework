@@ -13,9 +13,14 @@ tawvd_air = 1600;
 tawvd_drone = 1600;
 tawvd_object = tawvd_foot;
 
+// Disables ambient life and enables enviroment sounds
+sleep 0.1; //to make sure the following takes effect, see BIS wiki
+enableEnvironment [false, true];
+
 // Executes the join in progress script for Zeus users
 if ((isDedicated || !hasInterface) && isMultiplayer) exitwith{}; /* no need to continue on HC or Dedicated Server */
 0 = [] spawn compile preprocessFileLineNumbers "scripts\jipZeus.sqf";
+//ANYTHING AFTER HERE ONLY GETS EXECUTED ON PLAYER MACHINES
 
 // Friendly fire safe check
 player addrating 90000;
@@ -43,7 +48,3 @@ player addrating 90000;
 ["ACRE_PRC117F", "default", 9, "description", "Flight (Utility)"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 10, "description", "Battalion net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 11, "description", "P Plt Net"] call acre_api_fnc_setPresetChannelField;
-
-// Disables ambient life and enables enviroment sounds
-sleep 0.1; //to make sure the following takes effect, see BIS wiki
-enableEnvironment [false, true];
