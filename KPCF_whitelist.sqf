@@ -6,7 +6,7 @@
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
-    this will define th
+    This will define the array of whitelisted Steam64IDs that are able to use Cratefiller.
 */
 KPCF_enable_whitelist = true; //set to "true" if you want to limit Cratefiller only to certain users (users to be defined further down)
 
