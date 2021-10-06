@@ -45,6 +45,21 @@ if ((!(((getPos KPCF_activeSpawn) nearEntities 5) isEqualTo [])) && _checkSpawn)
 // Spawn crate
 private _crate = createVehicle [_crateType, ((getPos KPCF_activeSpawn) findEmptyPosition [0, 10, _crateType]), [], 0, "NONE"];
 
+//IF enabled set ACE Cargo size of crate to one
+if (KPCF_ace && KPCF_ace_cargo_one) then {
+    [_crate, 1] call ace_cargo_fnc_setSize;
+};
+
+//IF enabled ignore weight limit for ACE DRAG for all crates created by cratefiller
+if (KPCF_ace && KPCF_ace_drag_all) then {
+    [_crate, true, nil, nil, true] call ace_dragging_fnc_setDraggable;
+};
+
+//IF enabled ignore weight limit for ACE CARRY for all crates created by cratefiller
+if (KPCF_ace && KPCF_ace_carry_all) then {
+    [_crate, true, nil, nil, true] call ace_dragging_fnc_setCarryable;
+};
+
 // Clear the storage
 clearWeaponCargoGlobal _crate;
 clearMagazineCargoGlobal _crate;

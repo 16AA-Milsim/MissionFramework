@@ -10,30 +10,22 @@
 
     Dependencies:
         * KPGUI
-    "76561198042251903",    //Mueller, DEBUG purposes
-    "76561198059979416",    //Scarle, RLC
-    "76561197995574213",    //Webster?, 13AASR
-    "76561197970597319",    //Ainsley, 13AASR
-    "76561198306446879",    //Smith, 13AASR
-    "76561198181678883",    //Keeling, 13AASR
-    "76561198284837766",    //Beake, CSMR 
-    "76561198044241930",    //Tasner, CSMR
 */
-KP_cratefiller_whitelist = [
-    "76561198042251903",
-    "76561198059979416",
-    "76561197995574213",
-    "76561197970597319",
-    "76561198306446879",
-    "76561198181678883",
-    "76561198284837766", 
-    "76561198044241930"
+// Runs on every client to check if whitelisting is enabled/init whitelist lists
+KPCF_whitelisted = false;
+[] call compileFinal preprocessFileLineNumbers "KPCF_whitelist.sqf";
 
-];
-diag_log text "-------------------------[DEBUG - KP Cratefiller STARTED]-------------------------";
-// Only run, when we've got a real player & player has correct Steam64ID
-if (hasInterface && (getPlayerUID player in KP_cratefiller_whitelist)) then {
-    diag_log text "-------------------------[DEBUG - KP Cratefiller Player INIT]-------------------------";
+//check if player is in any of the three whitelists
+if (KPCF_enable_whitelist &&  (
+        (getPlayerUID player in KP_cratefiller_whitelist_steam_id)
+    ||  (name player in KP_cratefiller_whitelist_player_name)
+    ||  (groupId (group player) in KP_cratefiller_whitelist_group_name)
+)) then {
+    KPCF_whitelisted = true;
+};
+
+// Only run, when we've got a real player & and has been whitelisted OR Whitelist is disabled
+if (hasInterface && (KPCF_whitelisted || !KPCF_enable_whitelist)) then {
 
     // Read the config file
     [] call compile preprocessFileLineNumbers "KPCF_config.sqf";
