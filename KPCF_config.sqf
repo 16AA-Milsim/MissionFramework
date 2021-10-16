@@ -177,6 +177,7 @@ KPCF_items = [
     "ACE_SpraypaintGreen",
     "ACE_SpraypaintRed",
     "ACE_EntrenchingTool",
+    "ACE_Fortify",
     "ACE_Tripod",
     "ACE_Vector",
     "ACE_artilleryTable",
