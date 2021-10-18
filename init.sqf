@@ -17,7 +17,7 @@ sleep 0.1; //to make sure the following takes effect, see BIS wiki
 enableEnvironment [false, true];
 
 if (hasInterface) then {//excuted only on players
-    0 = [] spawn compile preprocessFileLineNumbers "scripts\jipZeus.sqf"; //executes Join In Progress Zeus script
+    0 = [] spawn compile preprocessFileLineNumbers "scripts\jipzeus.sqf"; //executes Join In Progress Zeus script
 };
 
 
