@@ -33,14 +33,3 @@ class CfgFunctions
 	#include "taw_vd\cfgfunctions.hpp"
   	#include "KPCF\KPCF_functions.hpp"
 };
-
-class CfgSounds
-{
- sounds[] = {};
- class tic
- {
-  name = "tic";
-  sound[] = {"\sounds\tic.ogg", 300, 1};
-  titles[] = {0,""};
- };
-};
