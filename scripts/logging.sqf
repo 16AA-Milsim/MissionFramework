@@ -15,7 +15,7 @@ Server Output:
 
 sleep 30;
 
-diag_log text "-----------------[LOGGING] [Monitoring started]-----------------";
+diag_log "-----------------[LOGGING] [Monitoring started]-----------------";
 
 private _delay = 300;
 private _source = "";
@@ -49,17 +49,15 @@ while {true} do {
         ];
 	};
 	if (!isDedicated && !hasInterface && isMultiplayer) then {
-		diag_log format ["[LOGGING] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 - Total units: %5 - Vehicles: %6 -  Active Scripts: [spawn: %7, execVM: %8, exec: %9, execFSM: %10]",
+		diag_log format ["[LOGGING] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 -  Active Scripts: [spawn: %5, execVM: %6, exec: %7, execFSM: %8]",
 		_source,                                //1
 		((round (diag_fps * 100.0)) / 100.0),   //2
 		{local _x} count allGroups,             //3
 		{local _x} count allUnits,              //4
-		count allUnits,                         //5
-		count vehicles,                         //6
-		diag_activeScripts select 0,            //7
-		diag_activeScripts select 1,            //8
-        diag_activeScripts select 2,            //9
-        diag_activeScripts select 3             //10
+		diag_activeScripts select 0,            //5
+		diag_activeScripts select 1,            //6
+        diag_activeScripts select 2,            //7
+        diag_activeScripts select 3             //8
         ];
 	};
 	if (hasInterface) then {
