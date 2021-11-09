@@ -35,7 +35,7 @@ while {true} do {
 	};
 
 	if (isServer) then {
-		diag_log text format ["[LOGGING] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 - Total units: %5 - Vehicles: %6 -  Active Scripts: [spawn: %7, execVM: %8, exec: %9, execFSM: %10]",
+		diag_log format ["[LOGGING] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 - Total units: %5 - Vehicles: %6 -  Active Scripts: [spawn: %7, execVM: %8, exec: %9, execFSM: %10]",
 		_source,                                //1
 		((round (diag_fps * 100.0)) / 100.0),   //2
 		{local _x} count allGroups,             //3
@@ -49,7 +49,7 @@ while {true} do {
         ];
 	};
 	if (!isDedicated && !hasInterface && isMultiplayer) then {
-		diag_log text format ["[LOGGING] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 - Total units: %5 - Vehicles: %6 -  Active Scripts: [spawn: %7, execVM: %8, exec: %9, execFSM: %10]",
+		diag_log format ["[LOGGING] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 - Total units: %5 - Vehicles: %6 -  Active Scripts: [spawn: %7, execVM: %8, exec: %9, execFSM: %10]",
 		_source,                                //1
 		((round (diag_fps * 100.0)) / 100.0),   //2
 		{local _x} count allGroups,             //3
@@ -63,7 +63,7 @@ while {true} do {
         ];
 	};
 	if (hasInterface) then {
-		private _text = text format ["[LOGGING] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 -  Active Scripts: [spawn: %5, execVM: %6, exec: %7, execFSM: %8]",
+		private _text = format ["[LOGGING] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 -  Active Scripts: [spawn: %5, execVM: %6, exec: %7, execFSM: %8]",
 		_source,                                //1
 		((round (diag_fps * 100.0)) / 100.0),   //2
 		{local _x} count allGroups,             //3
