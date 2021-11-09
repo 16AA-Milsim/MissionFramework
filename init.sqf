@@ -1,8 +1,17 @@
 //anything in here gets executed on all clients+server on mission start
+
+diag_log text "--------------------[LOGGING] [MISSIONSTART]--------------------"; //Mission Start logging
+diag_log text "----------------------------------------------------------------";
+diag_log text format ["--------------------[LOGGING] [%1]--------------------", briefingName];
+diag_log text "----------------------------------------------------------------";
+diag_log text "--------------------[LOGGING] [MISSIONSTART]--------------------";
+
 if (!isDedicated && !hasInterface && isMultiplayer) then { //anything in here gets executed on the headless clients
     [] execVM "scripts\show_fps.sqf";   //excute show FPS marker
-    diag_log text "--------------------[Executed show_fps on HC]--------------------"; //this will only show in  the HCs logs
+    diag_log text "--------------[LOGGING] [Executed show_fps on HC]---------------"; //this will only show in  the HCs logs
 };
+
+execVM "scripts\logging.sqf"; //run logging script
 
 // Removes the ability to turn grass off
 tawvd_disablenone = true;
