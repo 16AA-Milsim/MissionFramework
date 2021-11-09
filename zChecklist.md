@@ -21,7 +21,9 @@
 
 ## Modules
 - [ ] Zeus Modules & Owners
+  - [ ] Allow all addons including unofficial ones
 - [ ] ACEX Fortify Modules
+- [ ] HC Slots placed and named?
 
 ## Mission specific
 - [ ] Mission name correct

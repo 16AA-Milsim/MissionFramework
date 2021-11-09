@@ -81,7 +81,6 @@ KPCF_whitelistedItems = [
 
 // Defines the available weapons
 KPCF_weapons = [
-
     "ACE_VMH3",
     "rhs_weap_m72a7",
     "rhs_weap_fim92",
@@ -246,9 +245,6 @@ KPCF_items = [
     "kat_Painkiller",
     "kat_Pulseoximeter",
     "kat_aatKit"
-    
-
-
 ];
 
 // Defines the available backpacks
