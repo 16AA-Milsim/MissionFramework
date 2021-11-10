@@ -28,4 +28,5 @@
 ## Mission specific
 - [ ] Mission name correct
 - [ ] Check mission time
+- [ ] Check Object Count (Mission Statistics)
 - [ ] Check server idle FPS (load mission and join server, wait one minute and check FPS)
