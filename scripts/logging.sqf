@@ -13,9 +13,9 @@ Server Output:
 [LOGGING] [STATS] Source: Server - FPS: 51.28 - Local groups: 37 - Local units: 48 - Total units: 48 - Vehicles: 96 -  Active Scripts: [spawn: 17, execVM: 0, exec: 0, execFSM: 8]
 */
 
-sleep 30;
-
 diag_log "-----------------[LOGGING] [Monitoring started]-----------------";
+
+if(hasInterface) then {sleep 30;} else {sleep 10};
 
 private _delay = 300;
 private _source = "";

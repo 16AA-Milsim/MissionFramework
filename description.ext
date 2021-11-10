@@ -2,8 +2,8 @@
 onLoadName = "Missionname";
 onLoadMission = "Place";
 Author = "You";
-loadScreen = "images\logo.jpg";
-overviewPicture = "images\logo.jpg";
+//loadScreen = "images\logo.jpg";
+//overviewPicture = "images\logo.jpg";
 overviewText = "Overview Test";
 
 // mission attributes
