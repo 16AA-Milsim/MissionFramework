@@ -6,7 +6,7 @@
 
 1. Make sure you haven't set mission name or any other mission options in the editor.
    If you did go back to your editor and remove them.
-2. Downlaod the latest release from here (linked on the right).
+2. Download the latest release from here (linked on the right).
 3. Extract it, copy contents of folder to your mission folder
    It should look like this:
    * [YourAwesomeMissionFolder.mapname]
