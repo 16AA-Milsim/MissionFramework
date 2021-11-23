@@ -1,5 +1,5 @@
-//anything in here gets executed on all clients+server on mission start
-
+//anything in here gets executed on all clients+server on mission start (be aware of locality! and scripts with global effect)
+//add Mission specific scripts at the end!
 diag_log "--------------------[LOGGING] [MISSIONSTART]--------------------"; //Mission Start logging
 diag_log "----------------------------------------------------------------";
 diag_log format ["--------------------[LOGGING] [%1]--------------------", briefingName];
@@ -56,3 +56,5 @@ player addrating 90000;
 ["ACRE_PRC117F", "default", 9, "description", "Flight (Utility)"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 10, "description", "Battalion net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 11, "description", "P Plt Net"] call acre_api_fnc_setPresetChannelField;
+
+//Add mission specific scripts after here!

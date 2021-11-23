@@ -1,0 +1,1 @@
+player addGoggles "rhs_googles_black";
