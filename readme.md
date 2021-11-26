@@ -1,6 +1,6 @@
-# 16AA Mission Framework
+## 16AA Mission Framework
 
-## This contains all scripts and files necessary for 16AA Missions
+### This contains all scripts and files necessary for 16AA Missions
 
 #### How to use:
 
@@ -19,6 +19,20 @@
 
 ---
 
-### If you have any issues, suggestions or questions ping `Mildly_Interested#4250` on discord.
+#### Suggested Editor and plugins
 
-`Mission Framework 2021_11_23`
+[Visual Studio Code](https://code.visualstudio.com/)
+
+Plugins:
+
+* [SQF Language](https://marketplace.visualstudio.com/items?itemName=Armitxes.sqf) for syntax highlighting
+* [SQFLint](https://marketplace.visualstudio.com/items?itemName=skacekachna.sqflint) for error checking
+* [SQF Wiki](https://marketplace.visualstudio.com/items?itemName=EelisLynne.sqf-wikihttps:/) for quick wiki lookup
+* [Open RPT](https://marketplace.visualstudio.com/items?itemName=bux578.vscode-openlastrpt) to quickly open your latest log file
+* [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor) to create pretty markdown files like this one
+
+---
+
+#### If you have any issues, suggestions or questions ping `Mildly_Interested#4250` on discord.
+
+`Mission Framework 2021_11_26`
