@@ -25,11 +25,6 @@ tawvd_object = tawvd_foot;
 sleep 0.1; //to make sure the following takes effect, see BIS wiki
 enableEnvironment [false, true];
 
-if (hasInterface) then {//excuted only on players
-    0 = [] spawn compile preprocessFileLineNumbers "scripts\jipzeus.sqf"; //executes Join In Progress Zeus script
-};
-
-
 // Friendly fire safe check
 player addrating 90000;
 
