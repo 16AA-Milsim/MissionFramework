@@ -62,7 +62,7 @@ while {true} do {
 		_text remoteExec ["diag_log",2];
 	};
 	if (hasInterface) then {
-		private _text = format ["[LOGGING] [STATS] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 -  Active Scripts: [spawn: %5, execVM: %6, exec: %7, execFSM: %8]",
+		private _text = format ["[LOGGING] [STATS] [PLAYER] Source: %1 - FPS: %2 - Local groups: %3 - Local units: %4 -  Active Scripts: [spawn: %5, execVM: %6, exec: %7, execFSM: %8]",
 		_source,                                //1
 		((round (diag_fps * 100.0)) / 100.0),   //2
 		{local _x} count allGroups,             //3
