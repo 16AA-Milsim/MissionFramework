@@ -1,18 +1,19 @@
 ## 16AA Mission Framework
 
 ### This contains all scripts and files necessary for 16AA Missions
-`last updated 2021_11_26`
+
+`last updated 2022_01_10`
 
 #### How to use:
 
 1. Make sure you haven't set mission name or any other mission options in the editor.
    If you did go back to your editor and remove them.
 2. Download the latest version by clicking on the green code icon in the top right and selecting "Download ZIP".
-To check if your local framework version it outdated check the last updated date just below the heading.
-![image](https://user-images.githubusercontent.com/57712666/148797426-1b586d29-d117-49c3-841c-29373a24a59c.png)
-
+   To check if your local framework version it outdated check the last updated date just below the heading.
+   ![image](https://user-images.githubusercontent.com/57712666/148797426-1b586d29-d117-49c3-841c-29373a24a59c.png)
 3. Extract it, copy contents of folder to your mission folder
    It should look like this:
+
    * [YourAwesomeMissionFolder.mapname]
      * mission.sqm
      * description.ext
