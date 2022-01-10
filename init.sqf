@@ -7,8 +7,9 @@ diag_log "----------------------------------------------------------------";
 diag_log "--------------------[LOGGING] [MISSIONSTART]--------------------";
 
 if (!isDedicated && !hasInterface && isMultiplayer) then { //anything in here gets executed on the headless clients
-    [] execVM "scripts\show_fps.sqf";   //excute show FPS marker
-    diag_log "--------------[LOGGING] [Executed show_fps on HC]---------------"; //this will only show in  the HCs logs
+    //[] execVM "scripts\show_fps.sqf";   //excute show FPS marker
+    //diag_log "--------------[LOGGING] [Executed show_fps on HC]---------------"; //this will only show in  the HCs logs
+    //not needed anymore, done by ZHC mod
 };
 
 execVM "scripts\logging.sqf"; //run logging script
