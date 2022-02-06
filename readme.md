@@ -2,7 +2,7 @@
 
 ### This contains all scripts and files necessary for 16AA Missions
 
-`last updated 2022_01_10`
+`last updated 2022_02_06`
 
 #### How to use:
 
@@ -34,10 +34,8 @@ Plugins:
 * [SQFLint](https://marketplace.visualstudio.com/items?itemName=skacekachna.sqflint) for error checking
 * [SQF Wiki](https://marketplace.visualstudio.com/items?itemName=EelisLynne.sqf-wikihttps:/) for quick wiki lookup
 * [Open RPT](https://marketplace.visualstudio.com/items?itemName=bux578.vscode-openlastrpt) to quickly open your latest log file
-* [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor) to create pretty markdown files like this one
+* [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor) to preview pretty markdown files like this one
 
 ---
 
 #### If you have any issues, suggestions or questions ping `Mildly_Interested#4250` on discord.
-
-`Mission Framework 2021_11_26`
