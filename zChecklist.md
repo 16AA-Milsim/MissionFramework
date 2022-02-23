@@ -19,16 +19,25 @@
 - [ ] Cratefiller
   - [ ] check interaction
   - [ ] check interface
+  - [ ] check placement (do NOT place above water, only place on land)
 - [ ] Artillery
-  - [ ] Whitelisting (check on server not editor!)
+  - [ ] Options module
+  - [ ] Whitelisting module
+  - [ ] (Artillery)
+  - [ ] Whitelisting enforcement (check on server not editor!)
   - [ ] Functionality (select point on map and fire for effect)
+- [ ] Init fields
+  - [ ] Double object inits (no error does NOT mean it works)
+  - [ ] Check if added scripts are working correctly
 
 ## Modules
 
 - [ ] Zeus Modules & Owners
   - [ ] Allow all addons including unofficial ones
-- [ ] ACEX Fortify Modules
-- [ ] HC Slots placed and named?
+- [ ] ACEX Fortify Module (small preset)
+- [ ] HC Slots
+  - [ ] Placed down
+  - [ ] Assigned slot and variable name
 
 ## Mission specific
 
