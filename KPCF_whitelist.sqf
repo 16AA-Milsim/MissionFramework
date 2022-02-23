@@ -12,9 +12,14 @@ KPCF_enable_whitelist = true; //set to "true" if you want to limit Cratefiller o
 
 //Whitelist based on Steam64ID, can be obtained here: https://steamid.io/
 KP_cratefiller_whitelist_steam_id = [
-    "76561198042251903",    //Mueller
-    "76561198059979416",    //Scarle
-	"76561198013743881"     //Clayton
+    "76561198042251903",     //Mueller
+    "76561198059979416",     //Scarle
+    "76561198013743881",     //Clayton
+    "76561198269174036",     //Predo
+    "76561198086735081",     //Manning
+    "76561198021718582",     //Reynolds
+    "76561198013396016",     //Bedford
+    "76561199066295692"      //Pat
 ];
 
 //Whitelist based on player name
