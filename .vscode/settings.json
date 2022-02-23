@@ -1,0 +1,19 @@
+{
+    "sqf.enableCBA": true,
+    "sqf.enableACE3": true,
+    "sqflint.ignoredVariables": [
+        "ace_interact_menu_fnc_createAction",
+        "ace_interact_menu_fnc_addActionToObject",
+        "CBA_fnc_compatibleMagazines",
+        "acre_api_fnc_setPresetChannelField"
+    ],
+    "sqflint.exclude": [
+        "KPCF/**/*",
+        "taw_vd/**/*"
+    ],
+    "sqflint.contextSeparation": false,	
+    "cSpell.words": [
+        "ACEX",
+        "Respawn"
+    ]
+}
