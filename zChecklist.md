@@ -27,7 +27,7 @@
   - [ ] Whitelisting enforcement (check on server not editor!)
   - [ ] Functionality (select point on map and fire for effect)
 - [ ] Init fields
-  - [ ] Double object inits (no error does NOT mean it works)
+  - [ ] Double check object inits (no error does NOT mean it works)
   - [ ] Check if added scripts are working correctly
 
 ## Modules
