@@ -45,7 +45,8 @@ KPCF_crates = [
     "LSR_Crates_pelican_Empty_M",
     "LSR_Crates_pelican_Empty_L",
     "LSR_Crates_pelican_pallet_L",
-    "LSR_Crates_pelican_pallet_M"
+    "LSR_Crates_pelican_pallet_M",
+    "ACE_medicalSupplyCrate_advanced"
 ];
 
 
@@ -84,6 +85,10 @@ KPCF_whitelistedItems = [
 // Defines the available weapons
 KPCF_weapons = [
      "UK3CB_BAF_L85A3",
+     "rhs_weap_M107_w",
+     "rhs_weap_M107_d",
+     "rhs_weap_M107",
+     "launch_NLAW_F",
      "UK3CB_BAF_556_30Rnd",
      "UK3CB_BAF_L85A3_UGL",
      "UK3CB_BAF_L135A1",
@@ -102,17 +107,18 @@ KPCF_weapons = [
      "rhs_mag_M781_Practice",
      "UK3CB_BAF_L7A2",
      "UK3CB_BAF_762_100Rnd",
-     "UK3CB_BAF_762_100Rnd_Blank",
+     "UK3CB_BAF_762_100Rnd_T",
      "UK3CB_BAF_762_200Rnd",
-     "UK3CB_BAF_762_200Rnd_Blank",
+     "UK3CB_BAF_762_200Rnd_T",
      "UK3CB_BAF_L129A1",
      "UK3CB_BAF_762_L42A1_20Rnd",
-     "UK3CB_BAF_762_L42A1_20Rnd_Blank",
-     "ACE_5Rnd_127x99_API_Mag",
+     "rhsusf_mag_10Rnd_STD_50BMG_mk211",
+     "rhsusf_mag_10Rnd_STD_50BMG_M33",
      "16aa_Weapons_L115A3_OD",
+     "16aa_Weapons_L115A3_DD",
+     "16aa_Weapons_L115A3_SN",
      "16aa_Magazine_338AP",
      "16AA_Magazine_338AP_T",
-     "16AA_Magazine_338_blank_mag",
      "16AA_Magazine_338SP_NT",
      "16AA_Magazine_338SP_T",
      "UK3CB_BAF_L110_762",
@@ -142,7 +148,6 @@ KPCF_weapons = [
      "UK3CB_BAF_32Rnd_40mm_G_Box",
      "UK3CB_BAF_Tripod",
      "rhs_weap_m72a7",
-     "UK3CB_BAF_NLAW_Launcher",
      "ace_compat_rhs_usf3_mag_TOW2b",
      "ace_compat_rhs_usf3_mag_TOW2bb",
      "ACE_VMH3"
@@ -170,7 +175,7 @@ KPCF_grenades = [
 ];
 
 // Defines the available explosives
-KPCF_explosives = [ 
+KPCF_explosives = [
     "rhsusf_m112_mag",
     "rhsusf_m112x4_mag",
     "rhs_mine_M19_mag",
@@ -215,6 +220,20 @@ KPCF_items = [
     "kat_larynx",
     "kat_Pulseoximeter",
     "kat_stethoscope",
+    "kat_IV_16",
+    "kat_amiodarone",
+    "kat_bloodIV_O",
+    "kat_bloodIV_A",
+    "kat_bloodIV_AB",
+    "kat_bloodIV_B",
+    "kat_IO_FAST",
+    "kat_lidocaine",
+    "kat_nitroglycerin",
+    "kat_norepinephrine",
+    "kat_phenylephrine",
+    "kat_TXA",
+    "kat_Carbonate",
+    "kat_naloxone",
     "ACE_RangeTable_82mm",
     "ACE_artilleryTable",
     "ACE_ATragMX",
@@ -235,6 +254,7 @@ KPCF_items = [
     "ACE_SpraypaintGreen",
     "ACE_SpraypaintRed",
     "ACE_Tripod",
+    "ACE_Vector",
     "Laserbatteries",
     "ACE_wirecutter",
     "ACRE_PRC117F",
@@ -248,6 +268,8 @@ KPCF_items = [
     "uk3cb_baf_llm_ir_black",
     "uk3cb_baf_silencer_l115a3",
     "uk3cb_underbarrel_acc_fgrip_bipod",
+    "UK3CB_BAF_HMNVS",
+    "UK3CB_BAF_Soflam_Laserdesignator",
     "rksl_optic_lds",
     "uk3cb_baf_sffh",
     "uk3cb_underbarrel_acc_grippod",

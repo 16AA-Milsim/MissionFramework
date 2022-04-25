@@ -38,6 +38,7 @@
 - [ ] HC Slots
   - [ ] Placed down
   - [ ] Assigned slot and variable name
+  - [ ] Move HC slots close to where action will happen
 
 ## Mission specific
 
