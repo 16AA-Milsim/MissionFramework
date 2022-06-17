@@ -8,6 +8,7 @@
 - [ ] Does respawn work
   - [ ] Respawn location defined
   - [ ] Do People spawn back with their gear
+  - [ ] Respawn marker in editor?
 
 ## AI
 
