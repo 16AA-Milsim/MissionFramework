@@ -84,6 +84,6 @@ player addEventHandler ["Respawn",
 			private _ptt2 = _newRadioList select 1; 
 			private _ptt3 = _newRadioList select 2; 
 			_pttNewRadioList = [ [_ptt1, _ptt2, _ptt3] ] call acre_api_fnc_setMultiPushToTalkAssignment; //assign new radios to old PTT setup
-			systemChat format ["Your radios have been configured as they were."];
+			systemChat format ["Your radio settings have been restored."];
 		}, [_newRadioList], 5] call CBA_fnc_waitAndExecute; //delay 5 secs to allow above block to complete
 	}];
