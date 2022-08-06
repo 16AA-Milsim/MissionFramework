@@ -15,7 +15,6 @@ player addEventHandler ["Respawn",
 	{
 		_newRadioList = [];
 		params ["_unit", "_corpse", "_newRadioList"];
-		_unit setUnitLoadout [[_corpse] call acre_api_fnc_filterUnitLoadout, false]; //copy old radio items from corpse to respawned player
 		{
 			private _radioType = _x;
 			private _radios = [_radioType, _corpse] call acre_api_fnc_getAllRadiosByType; //return array of unique Radio IDs from corpse
