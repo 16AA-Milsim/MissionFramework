@@ -32,6 +32,7 @@
 - [ ] HC Slots
   - [ ] Placed down
   - [ ] Assigned slot and variable name
+  - [ ] Ticked as "playable"
   - [ ] Move HC slots close to area of operations (max 8 km away)
 - [ ] ACEX Fortify Module (small preset)
 - [ ] Artillery
