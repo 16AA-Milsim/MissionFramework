@@ -19,7 +19,7 @@
 
 // Gametype and min/max players
 class Header {
-    gameType = "CTI";
+    gameType = "Coop";
     minPlayers = 1;
     maxPlayers = 100;
 };
