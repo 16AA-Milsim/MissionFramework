@@ -4,6 +4,7 @@
 
 - [ ] Units marked as playable
   - [ ] Lobby Manager, check Role order (Coy, 1Plt, 2Plt, 4Plt, Attachments, MI)
+  - [ ] Check if editor group names are correct
 - [ ] Units spawn with correct gear
 - [ ] Does respawn work
   - [ ] Respawn location defined
