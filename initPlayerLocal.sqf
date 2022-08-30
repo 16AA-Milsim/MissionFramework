@@ -4,7 +4,9 @@ fst_list = [
     "fst1",
     "fst2",
     "fst3",
-    "fst4"
+    "fst4",
+	"pf1",
+	"pf2"
 ];
 
 if (vehicleVarName player in fst_list) then { //add SOFLAM in backpack to every FST slot
