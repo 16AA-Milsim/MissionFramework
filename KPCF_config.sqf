@@ -84,87 +84,95 @@ KPCF_whitelistedItems = [
 
 // Defines the available weapons
 KPCF_weapons = [
-     "UK3CB_BAF_L85A3",
-     "rhs_weap_M107_w",
-     "rhs_weap_M107_d",
-     "rhs_weap_M107",
-     "launch_NLAW_F",
-     "UK3CB_BAF_556_30Rnd",
-     "UK3CB_BAF_L85A3_UGL",
-     "UK3CB_BAF_L135A1",
-     "rhs_mag_M433_HEDP",
-     "rhs_mag_m4009",
-     "rhs_mag_M583A1_white",
-     "rhs_mag_M585_white_cluster",
-     "rhs_mag_m661_green",
-     "rhs_mag_m662_red",
-     "rhs_mag_M663_green_cluster",
-     "rhs_mag_M664_red_cluster",
-     "rhs_mag_m713_Red",
-     "rhs_mag_m714_White",
-     "rhs_mag_m715_Green",
-     "rhs_mag_m716_yellow",
-     "rhs_mag_M781_Practice",
-     "UK3CB_BAF_L7A2",
-     "UK3CB_BAF_762_100Rnd",
-     "UK3CB_BAF_762_100Rnd_T",
-     "UK3CB_BAF_762_200Rnd",
-     "UK3CB_BAF_762_200Rnd_T",
-     "UK3CB_BAF_L129A1",
-     "UK3CB_BAF_762_L42A1_20Rnd",
-     "rhsusf_mag_10Rnd_STD_50BMG_mk211",
-     "rhsusf_mag_10Rnd_STD_50BMG_M33",
-     "16aa_Weapons_L115A3_OD",
-     "16aa_Weapons_L115A3_DD",
-     "16aa_Weapons_L115A3_SN",
-     "16aa_Magazine_338AP",
-     "16AA_Magazine_338AP_T",
-     "16AA_Magazine_338SP_NT",
-     "16AA_Magazine_338SP_T",
-     "UK3CB_BAF_L110_762",
-     "UK3CB_BAF_L131A1",
-     "UK3CB_BAF_9_17Rnd",
-     "UK3CB_BAF_M6",
-     "UK3CB_BAF_1Rnd_60mm_Mo_AB_Shells",
-     "UK3CB_BAF_1Rnd_60mm_Mo_Shells",
-     "UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",
-     "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_Red",
-     "UK3CB_BAF_1Rnd_60mm_Mo_WPSmoke_White",
-     "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",
-     "ace_compat_rhs_usf3_m252_carry",
-     "ace_csw_carryMortarBaseplate",
-     "ACE_1Rnd_82mm_Mo_HE_Guided",
-     "ACE_1Rnd_82mm_Mo_HE",
-     "ACE_1Rnd_82mm_Mo_Illum",
-     "ACE_1Rnd_82mm_Mo_HE_LaserGuided",
-     "ACE_1Rnd_82mm_Mo_Smoke",
-     "16aa_Weapon_FGM_148_Javelin",
-     "16aa_Magazine_Javelin_Tube",
-     "rhs_weap_fim92",
-     "rhs_fim92_mag",
-     "UK3CB_BAF_L111A1",
-     "UK3CB_BAF_127_100Rnd",
-     "UK3CB_BAF_L134A1",
-     "UK3CB_BAF_32Rnd_40mm_G_Box",
-     "UK3CB_BAF_Tripod",
-     "rhs_weap_m72a7",
-     "ace_compat_rhs_usf3_mag_TOW2b",
-     "ace_compat_rhs_usf3_mag_TOW2bb",
-     "ACE_VMH3"
+    "UK3CB_BAF_L85A3",
+    "rhs_weap_M107_w",
+    "rhs_weap_M107_d",
+    "rhs_weap_M107",
+    "launch_NLAW_F",
+    "UK3CB_BAF_556_30Rnd",
+    "UK3CB_BAF_L85A3_UGL",
+    "UK3CB_BAF_L135A1",
+    "rhs_mag_M433_HEDP",
+    "rhs_mag_m4009",
+    "rhs_mag_M583A1_white",
+    "rhs_mag_M585_white_cluster",
+    "rhs_mag_m661_green",
+    "rhs_mag_m662_red",
+    "rhs_mag_M663_green_cluster",
+    "rhs_mag_M664_red_cluster",
+    "rhs_mag_m713_Red",
+    "rhs_mag_m714_White",
+    "rhs_mag_m715_Green",
+    "rhs_mag_m716_yellow",
+    "rhs_mag_M781_Practice",
+    "UK3CB_BAF_L7A2",
+    "UK3CB_BAF_762_100Rnd",
+    "UK3CB_BAF_762_100Rnd_T",
+    "UK3CB_BAF_762_200Rnd",
+    "UK3CB_BAF_762_200Rnd_T",
+    "UK3CB_BAF_L129A1",
+    "UK3CB_BAF_762_L42A1_20Rnd",
+    "rhsusf_mag_10Rnd_STD_50BMG_mk211",
+    "rhsusf_mag_10Rnd_STD_50BMG_M33",
+    "16aa_Weapons_L115A3_OD",
+    "16aa_Weapons_L115A3_DD",
+    "16aa_Weapons_L115A3_SN",
+    "16aa_Magazine_338AP",
+    "16AA_Magazine_338AP_T",
+    "16AA_Magazine_338SP_NT",
+    "16AA_Magazine_338SP_T",
+    "UK3CB_BAF_L110_762",
+    "UK3CB_BAF_L131A1",
+    "UK3CB_BAF_9_17Rnd",
+    "UK3CB_BAF_M6",
+    "UK3CB_BAF_1Rnd_60mm_Mo_AB_Shells",
+    "UK3CB_BAF_1Rnd_60mm_Mo_Shells",
+    "UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",
+    "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_Red",
+    "UK3CB_BAF_1Rnd_60mm_Mo_WPSmoke_White",
+    "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",
+    "ace_compat_rhs_usf3_m252_carry",
+    "ace_csw_carryMortarBaseplate",
+    "ACE_1Rnd_82mm_Mo_HE_Guided",
+    "ACE_1Rnd_82mm_Mo_HE",
+    "ACE_1Rnd_82mm_Mo_Illum",
+    "ACE_1Rnd_82mm_Mo_HE_LaserGuided",
+    "ACE_1Rnd_82mm_Mo_Smoke",
+    "16aa_Weapon_FGM_148_Javelin",
+    "16aa_Magazine_Javelin_Tube",
+    "rhs_weap_fim92",
+    "rhs_fim92_mag",
+    "UK3CB_BAF_L111A1",
+    "UK3CB_BAF_127_100Rnd",
+    "UK3CB_BAF_L134A1",
+    "UK3CB_BAF_32Rnd_40mm_G_Box",
+    "UK3CB_BAF_Tripod",
+    "rhs_weap_m72a7",
+    "ace_compat_rhs_usf3_mag_TOW2b",
+    "ace_compat_rhs_usf3_mag_TOW2bb",
+    "Starstreak",
+    "Starstreak2_missile",
+    "RW_556_Bandolier",
+    "RW_762Mag_Bandolier",
+    "RW_762Link_Bandolier"
 ];
 
 // Defines the available grenades
 KPCF_grenades = [
+    //Strobes
     "MS_Strobe_Mag_1",
+    //Smokes
     "rhs_mag_an_m8hc",
     "rhs_mag_m18_green",
     "rhs_mag_m18_purple",
     "rhs_mag_m18_red",
     "rhs_mag_m18_yellow",
     "UK3CB_BAF_SmokeShellBlue",
+    //HEs
     "rhs_mag_m67",
     "rhs_mag_m69",
     "rhs_mag_mk84",
+    //Chemlights
     "ACE_Chemlight_HiBlue",
     "ACE_Chemlight_HiGreen",
     "ACE_Chemlight_HiRed",
@@ -178,15 +186,16 @@ KPCF_grenades = [
 KPCF_explosives = [
     "rhsusf_m112_mag",
     "rhsusf_m112x4_mag",
-    "rhs_mine_M19_mag",
-    "ClaymoreDirectionalMine_Remote_Mag",
-    "rhsusf_mine_m49a1_3m_mag",
-    "rhsusf_mine_m49a1_6m_mag",
-    "rhsusf_mine_m49a1_10m_mag"
+    "rhs_mine_M19_mag",                     //AT Mine
+    "ClaymoreDirectionalMine_Remote_Mag",   //M18A1 Claymore
+    "rhsusf_mine_m49a1_3m_mag",             //Tripwire Flare mine 3m
+    "rhsusf_mine_m49a1_6m_mag",             //Tripwire Flare mine 6m
+    "rhsusf_mine_m49a1_10m_mag"             //Tripwire Flare mine 10m
 ];
 
 // Defines the available items
 KPCF_items = [
+    //ACE Medical
     "ACE_adenosine",
     "ACE_epinephrine",
     "ACE_morphine",
@@ -208,10 +217,10 @@ KPCF_items = [
     "ACE_splint",
     "ACE_surgicalKit",
     "ACE_tourniquet",
+    //KAT Medical
     "kat_aatKit",
     "kat_accuvac",
     "kat_X_AED",
-    "Attachable_Helistretcher",
     "kat_AED",
     "kat_chestSeal",
     "KAT_Empty_bloodIV_250",
@@ -234,6 +243,7 @@ KPCF_items = [
     "kat_TXA",
     "kat_Carbonate",
     "kat_naloxone",
+    //ACE Items
     "ACE_RangeTable_82mm",
     "ACE_artilleryTable",
     "ACE_ATragMX",
@@ -243,8 +253,8 @@ KPCF_items = [
     "ACE_Fortify",
     "ACE_Kestrel4500",
     "ACE_Flashlight_KSF1",
-    "ACE_M26_Clacker",
-    "ACE_Clacker",
+    "ACE_M26_Clacker",      //M152 Firing Device
+    "ACE_Clacker",          //M57 Firing Device
     "ACE_MapTools",
     "ACE_microDAGR",
     "ACE_RangeCard",
@@ -255,15 +265,27 @@ KPCF_items = [
     "ACE_SpraypaintRed",
     "ACE_Tripod",
     "ACE_Vector",
-    "Laserbatteries",
     "ACE_wirecutter",
+    "ACE_VMH3",
+    "ACE_Humanitarian_Ration",
+    "ACE_Sunflower_Seeds",
+    "ACE_WaterBottle",
+    "ace_marker_flags_black",
+    "ace_marker_flags_blue",
+    "ace_marker_flags_green",
+    "ace_marker_flags_red",
+    "ace_marker_flags_white",
+    "ace_marker_flags_yellow",
+    //ACRE
     "ACRE_PRC117F",
     "ACRE_PRC152",
     "ACRE_PRC343",
     "ACRE_VHF30108",
+    //CTABs
     "ItemAndroid",
     "ItemcTab",
     "itc_land_tablet_fdc",
+    //Weapon Attachments
     "uk3cb_baf_ta648",
     "uk3cb_baf_llm_ir_black",
     "uk3cb_baf_silencer_l115a3",
@@ -282,8 +304,28 @@ KPCF_items = [
     "rhsusf_acc_grip1",
     "UK3CB_BAF_Bayonet_L3A1",
     "rhs_altyn_visordown",
+    //Misc Items
     "V_EOD_olive_F",
-    "ToolKit"
+    "ToolKit",
+    "B_UavTerminal",
+    "Attachable_Helistretcher",
+    "Laserbatteries",
+    //Signal Panels
+    "pook_minespanel_drop",     //Mines Panel
+    "pook_SignalMarker1_R",     //HLS Panel Triangle Red
+    "pook_SignalMarker2_R",
+    "pook_SignalMarker3_R",
+    "pook_SignalMarker4_R",
+    "pook_SignalMarker5_R",
+    "pook_SignalMarker6_R",
+    "pook_SignalMarker7_R",
+    //Camo Nets
+    "pook_camonet_land_west_drop5",     //Big DPM Desert
+    "pook_camonet_land_west_drop13",    //Big DPM Woodland
+    "pook_camonet_med_west_drop5",      //3 Man DPM Desert
+    "pook_camonet_med_west_drop13",     //3 Man DPM Woodland
+    "pook_camonet_small_west_drop5",    //2 Man DPM Desert
+    "pook_camonet_small_west_drop13"    //2 Man DPM Woodland
 ];
 
 // Defines the available backpacks
@@ -293,6 +335,6 @@ KPCF_backpacks = [
     "rhs_Tow_Gun_Bag",
     "rhs_TOW_Tripod_Bag",
     "B_rhsusf_B_BACKPACK",
-    "UK3CB_BAF_B_Bergen_MTP_Rifleman_XL_A"
-
+    "UK3CB_BAF_B_Bergen_MTP_Rifleman_XL_A",
+    "B_UGV_02_Demining_backpack_F"
 ];
