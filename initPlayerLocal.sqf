@@ -1,18 +1,11 @@
-player addGoggles "Rev_Shades_Yellow";
-waitUntil {!isNull player};  
-fst_list = [ 
-    "fst1",
-    "fst2",
-    "fst3",
-    "fst4",
-	"pf1",
-	"pf2"
-];
+player addGoggles "Rev_Shades_Yellow"; //add to every player
+waitUntil {!isNull player};
 
-if (vehicleVarName player in fst_list) then { //add SOFLAM in backpack to every FST slot
-    player addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
+if (player getVariable ["16AA_Laserdesignator_Backpack", false]) then {
+  player addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
 };
 
+//radio restore script
 player addEventHandler ["Respawn",
 	{
 		_newRadioList = [];
