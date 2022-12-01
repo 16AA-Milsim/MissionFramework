@@ -5,11 +5,23 @@ if (player getVariable ["16AA_Laserdesignator_Backpack", false]) then {
   player addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
 };
 
-//radio restore script
+// Set speech volume to 0.25
+FW_Acre_Volume_Value = 0.25; 
+ 
+[0.4] call acre_api_fnc_setSelectableVoiceCurve; 
+ 
+[{ 
+    acre_sys_gui_volumeLevel = FW_Acre_Volume_Value; 
+}, [], 1] call CBA_fnc_waitAndExecute;
+
+// Re-set radio settings on respawn START
 player addEventHandler ["Respawn",
 	{
-		_newRadioList = [];
+		_newRadioList set [0, 1];
+		_newRadioList set [1, 1];
+		_newRadioList set [2, 1];
 		params ["_unit", "_corpse", "_newRadioList"];
+		_unit setUnitLoadout [[_corpse] call acre_api_fnc_filterUnitLoadout, false]; //copy old radio items from corpse to respawned player
 		{
 			private _radioType = _x;
 			private _radios = [_radioType, _corpse] call acre_api_fnc_getAllRadiosByType; //return array of unique Radio IDs from corpse
@@ -81,3 +93,4 @@ player addEventHandler ["Respawn",
 			systemChat format ["Your radio settings have been restored."];
 		}, [_newRadioList], 5] call CBA_fnc_waitAndExecute; //delay 5 secs to allow above block to complete
 	}];
+// Re-set radio settings on respawn END
