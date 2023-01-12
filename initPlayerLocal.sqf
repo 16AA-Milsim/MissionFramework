@@ -33,7 +33,7 @@ switch true do
 	case (_group_player in group_itc): {[player,"16aa_w_gs_itc_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_jhc): {[player,"16aa_jhc_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_mi): {[player,"16aa_w_mi_itc_dzf"] call BIS_fnc_setUnitInsignia;};
-	case (_group_player in group_pf): {[player,"16aa_pf_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_pf): {[player,"16aa_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
 	default {[player,"16aa_w_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
 };
 
@@ -113,7 +113,8 @@ player addEventHandler ["Respawn",
 			_pttNewRadioList = [ [_ptt1, _ptt2, _ptt3] ] call acre_api_fnc_setMultiPushToTalkAssignment; //assign new radios to old PTT setup
 			systemChat format ["Your radio settings have been restored."];
 		}, [_newRadioList], 5] call CBA_fnc_waitAndExecute; //delay 5 secs to allow above block to complete
-	}];
+	}
+];
 
 //restore insignia after respawn
 params ["_player"];
