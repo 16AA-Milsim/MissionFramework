@@ -47,7 +47,7 @@ switch true do
 };
 
 //Event Handlers
-// Re-set radio settings on respawn START
+//restore radio settings on respawn
 player addEventHandler ["Respawn",
 	{
 		_newRadioList set [0, 1];
@@ -127,7 +127,7 @@ player addEventHandler ["Respawn",
 	}
 ];
 
-//restore insignia after respawn
+//copy insignia from corpse to respawned player
 params ["_player"];
 _player addMPEventHandler ["MPRespawn", {
 	params ["_unit", "_corpse"];
@@ -141,4 +141,3 @@ _player addMPEventHandler ["MPRespawn", {
 		};
 	};
 }];
-// Re-set radio settings on respawn END
