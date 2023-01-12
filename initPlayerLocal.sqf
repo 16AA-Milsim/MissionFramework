@@ -14,7 +14,40 @@ FW_Acre_Volume_Value = 0.25;
     acre_sys_gui_volumeLevel = FW_Acre_Volume_Value; 
 }, [], 1] call CBA_fnc_waitAndExecute;
 
-// Re-set radio settings on respawn START
+// Set appropriate 16AA Drop Zone Flash for the players
+_group_player = groupId (group player);
+group_1pl = ["1 Plt HQ","1-1","1-2","1-3"];
+group_2pl = ["2 Plt HQ","2-1","2-2","2-3"];
+group_3pl = ["3 Plt HQ","3-1","3-2"];
+group_4pl_hq = ["4 Plt HQ"];
+group_13aasr = ["4-3"];
+group_16csmr = ["4-4"];
+group_jfist = ["7-0"];
+group_hq = ["Coy HQ"];
+group_itc = ["ITC"];
+group_jhc = ["JHC"];
+group_mi = ["MI"];
+group_pf = ["Prophet 6-0"];
+[player, ""] call BIS_fnc_setUnitInsignia; 
+switch true do
+{
+	case (_group_player in group_1pl): {[player,"16aa_w_gs_1pl_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_2pl): {[player,"16aa_w_gs_2pl_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_3pl): {[player,"16aa_w_gs_3pl_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_4pl_hq): {[player,"16aa_w_gs_hq_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_13aasr): {[player,"16aa_w_gs_13aasr_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_16csmr): {[player,"16aa_w_gs_16csmr_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_jfist): {[player,"16aa_w_gs_jfist_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_hq): {[player,"16aa_w_gs_hq_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_itc): {[player,"16aa_w_gs_itc_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_jhc): {[player,"16aa_jhc_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_mi): {[player,"16aa_w_mi_itc_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_pf): {[player,"16aa_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
+	default {[player,"16aa_w_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
+};
+
+//Event Handlers
+//restore radio settings on respawn
 player addEventHandler ["Respawn",
 	{
 		_newRadioList set [0, 1];
@@ -91,5 +124,20 @@ player addEventHandler ["Respawn",
 			private _ptt3 = _newRadioList select 2; 
 			_pttNewRadioList = [ [_ptt1, _ptt2, _ptt3] ] call acre_api_fnc_setMultiPushToTalkAssignment; //assign new radios to old PTT setup
 		}, [_newRadioList], 5] call CBA_fnc_waitAndExecute; //delay 5 secs to allow above block to complete
-	}];
-// Re-set radio settings on respawn END
+	}
+];
+
+//copy insignia from corpse to respawned player
+params ["_player"];
+_player addMPEventHandler ["MPRespawn", {
+	params ["_unit", "_corpse"];
+	private _insignia = [_corpse] call BIS_fnc_getUnitInsignia;
+	[_unit, _insignia] spawn {
+		params ["_unit", "_insignia"];
+		sleep 1;
+		isNil {
+			_unit setVariable ["BIS_fnc_setUnitInsignia_class", nil]; // you can also do [_unit, ""] call BIS_fnc_setUnitInsignia, but this way is faster (plus no network traffic)
+			[_unit, _insignia] call BIS_fnc_setUnitInsignia;
+		};
+	};
+}];
