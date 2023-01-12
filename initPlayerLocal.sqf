@@ -5,6 +5,15 @@ if (player getVariable ["16AA_Laserdesignator_Backpack", false]) then {
   player addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
 };
 
+// Set speech volume to 0.25
+FW_Acre_Volume_Value = 0.25; 
+ 
+[0.4] call acre_api_fnc_setSelectableVoiceCurve; 
+ 
+[{ 
+    acre_sys_gui_volumeLevel = FW_Acre_Volume_Value; 
+}, [], 1] call CBA_fnc_waitAndExecute;
+
 // Set appropriate 16AA Drop Zone Flash for the players
 _group_player = groupId (group player);
 group_1pl = ["1 Plt HQ","1-1","1-2","1-3"];
@@ -38,11 +47,14 @@ switch true do
 };
 
 //Event Handlers
-//radio restore script
+// Re-set radio settings on respawn START
 player addEventHandler ["Respawn",
 	{
-		_newRadioList = [];
+		_newRadioList set [0, 1];
+		_newRadioList set [1, 1];
+		_newRadioList set [2, 1];
 		params ["_unit", "_corpse", "_newRadioList"];
+		_unit setUnitLoadout [[_corpse] call acre_api_fnc_filterUnitLoadout, false]; //copy old radio items from corpse to respawned player
 		{
 			private _radioType = _x;
 			private _radios = [_radioType, _corpse] call acre_api_fnc_getAllRadiosByType; //return array of unique Radio IDs from corpse
@@ -111,7 +123,6 @@ player addEventHandler ["Respawn",
 			private _ptt2 = _newRadioList select 1; 
 			private _ptt3 = _newRadioList select 2; 
 			_pttNewRadioList = [ [_ptt1, _ptt2, _ptt3] ] call acre_api_fnc_setMultiPushToTalkAssignment; //assign new radios to old PTT setup
-			systemChat format ["Your radio settings have been restored."];
 		}, [_newRadioList], 5] call CBA_fnc_waitAndExecute; //delay 5 secs to allow above block to complete
 	}
 ];
@@ -130,3 +141,4 @@ _player addMPEventHandler ["MPRespawn", {
 		};
 	};
 }];
+// Re-set radio settings on respawn END
