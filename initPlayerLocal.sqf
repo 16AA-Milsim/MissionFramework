@@ -50,7 +50,7 @@ switch true do
 //restore radio settings on respawn
 player addEventHandler ["Respawn",
     {        
-                _newRadioList = [];
+		_newRadioList = [];
         _newRadioList set [0, 1];
         _newRadioList set [1, 1];
         _newRadioList set [2, 1];
