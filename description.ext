@@ -38,7 +38,7 @@ Author = "you";
 
 // Path to image which will be displayed when the mission is highlighted on the mission selection screen.
 // Image should be .paa format and in 2:1 aspect ratio – ideally 1024x512 (Arma 3).
-overviewPicture = "images\16AA_Loading_Screen_Image.paa";
+// overviewPicture = "images\16AA_Loading_Screen_Image.paa";
 
 // Text to be displayed below the overviewPicture on the mission selection screen
 overviewText = "16 Air Assault Milsim Community";
