@@ -34,7 +34,7 @@ Author = "you";
 */
 
 // Mission name displayed in the mission selection menu.
-//briefingName = Missionname; //if active wont show the folder name of the mission, makes it hard to select, keep off
+// briefingName = Missionname; //if active wont show the folder name of the mission, makes it hard to select, keep off
 
 // Path to image which will be displayed when the mission is highlighted on the mission selection screen.
 // Image should be .paa format and in 2:1 aspect ratio – ideally 1024x512 (Arma 3).
@@ -52,7 +52,7 @@ overviewText = "16 Air Assault Milsim Community";
 // String (usually mission name) shown during mission loading.
 // The string is shown in a slightly larger font above the loadScreen.
 // This will the mission name visible in the OCAP replay selection
-onLoadName = Campaign Name;
+onLoadName = Campaign Name I;
 
 // You can define a picture to be shown while the mission is loaded.
 // The path is relative to the mission folder.

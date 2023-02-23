@@ -2,7 +2,7 @@
 
 ### This contains all scripts and files necessary for 16AA Missions
 
-`last updated 2023_02_06`
+`last updated 2023_02_23`
 
 #### How to use:
 
@@ -20,7 +20,7 @@
      * KPCF_config.sqf
      * KPCF_whitelist.sqf
        and so on
-4. Launch your mission as local multiplayer from the editor and run through the `Checklist.md`
+4. Launch your mission as local multiplayer from the editor and run through the mission checklist found on the wiki.
 
 ---
 
