@@ -33,8 +33,8 @@ switch true do
 {
 	case (_group_player in group_1pl): {[player,"16aa_w_gs_1pl_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_2pl): {[player,"16aa_w_gs_2pl_dzf"] call BIS_fnc_setUnitInsignia;};
-	case (_group_player in group_3pl): {[player,"16aa_w_gs_3pl_dzf"] call BIS_fnc_setUnitInsignia;};
-	case (_group_player in group_4pl_hq): {[player,"16aa_w_gs_4pl_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_3pl): {[player,"16aa_w_gs_4pl_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_4pl_hq): {[player,"16aa_w_gs_hq_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_13aasr): {[player,"16aa_w_gs_13aasr_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_16csmr): {[player,"16aa_w_gs_16csmr_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_jfist): {[player,"16aa_w_gs_jfist_dzf"] call BIS_fnc_setUnitInsignia;};
