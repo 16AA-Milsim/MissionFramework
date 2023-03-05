@@ -40,7 +40,7 @@ switch true do
 	case (_group_player in group_jfist): {[player,"16aa_w_gs_jfist_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_hq): {[player,"16aa_w_gs_hq_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_itc): {[player,"16aa_w_gs_itc_dzf"] call BIS_fnc_setUnitInsignia;};
-	case (_group_player in group_jhc): {[player,"16aa_jhc_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_jhc): {[player,"16aa_w_gs_jhc_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_mi): {[player,"16aa_w_gs_mi_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_pf): {[player,"16aa_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
 	default {[player,"16aa_w_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
