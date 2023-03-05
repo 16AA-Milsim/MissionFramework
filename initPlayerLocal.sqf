@@ -141,3 +141,28 @@ _player addMPEventHandler ["MPRespawn", {
 		};
 	};
 }];
+
+//put unconsious players in spectator mode
+["ace_unconscious", {
+    params ["_unit", "_enable"];
+    if (_unit isNotEqualTo player) exitWith {};
+    if (_enable) then {
+        _unit setVariable ["ace_medical_feedback_effectUnconsciousTimeout", 10e10];
+        [{
+            if (!(player getVariable ["ace_isunconscious", false]) || {!alive player}) exitWith {};
+            [true, true, false] call ace_spectator_fnc_setSpectator;
+			[units player] call ace_spectator_fnc_updateUnits;
+			[[1,2], [0]] call ace_spectator_fnc_updateCameraModes;
+			[[-2,-1], [0,1,2,3,4,5,6,7]] call ace_spectator_fnc_updateVisionModes;
+            [{
+                hint "You are unconscious!";
+            }, nil, 0.5] call CBA_fnc_waitAndExecute;
+        }, nil, 5] call CBA_fnc_waitAndExecute;
+    } else {
+        [false] call ace_spectator_fnc_setSpectator;
+    };
+}] call CBA_fnc_addEventHandler;
+//remove spectator from respawned units
+_player addEventHandler ["Respawn", { //TODO: figure out way to remove spectator earlier to avoid stacked UIs in respawn selection
+	[false] call ace_spectator_fnc_setSpectator;
+}];
