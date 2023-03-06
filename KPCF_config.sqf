@@ -310,7 +310,7 @@ KPCF_items = [
     "B_UavTerminal",
     "Attachable_Helistretcher",
     "Laserbatteries",
-    "FISH_Cream_Kit_Europe"",
+    "FISH_Cream_Kit_Europe",
     //Signal Panels
     "pook_minespanel_drop",     //Mines Panel
     "pook_SignalMarker1_R",     //HLS Panel Triangle Red
