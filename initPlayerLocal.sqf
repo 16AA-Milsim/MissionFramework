@@ -45,6 +45,23 @@ switch true do
 	case (_group_player in group_pf): {[player,"16aa_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
 	default {[player,"16aa_w_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
 };
+//disable remote sensor on players who do not need to check AI raycasts
+switch true do
+{
+	case (_group_player in group_1pl): {disableRemoteSensors true;};
+	case (_group_player in group_2pl): {disableRemoteSensors true;};
+	case (_group_player in group_3pl): {disableRemoteSensors true;};
+	case (_group_player in group_4pl_hq): {disableRemoteSensors true;};
+	case (_group_player in group_13aasr): {disableRemoteSensors true;};
+	case (_group_player in group_16csmr): {disableRemoteSensors true;};
+	case (_group_player in group_jfist): {disableRemoteSensors true;};
+	case (_group_player in group_hq): {disableRemoteSensors true;};
+	case (_group_player in group_itc): {};
+	case (_group_player in group_jhc): {};
+	case (_group_player in group_mi): {};
+	case (_group_player in group_pf): {disableRemoteSensors true;};
+	default {};
+};
 
 //Event Handlers
 //restore radio settings on respawn
