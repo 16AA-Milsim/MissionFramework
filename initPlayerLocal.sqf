@@ -151,7 +151,8 @@ _player addMPEventHandler ["MPRespawn", {
         [{
             if (!(player getVariable ["ace_isunconscious", false]) || {!alive player}) exitWith {};
             [true, true, false] call ace_spectator_fnc_setSpectator;
-			[units player] call ace_spectator_fnc_updateUnits;
+			[[west], [east,resistance,civilian]] call ace_spectator_fnc_updateSides;
+			[units player, allPlayers - units player] call ace_spectator_fnc_updateUnits; //TODO: only allow group, currently allows all
 			[[1,2], [0]] call ace_spectator_fnc_updateCameraModes;
 			[[-2,-1], [0,1,2,3,4,5,6,7]] call ace_spectator_fnc_updateVisionModes;
             [{
