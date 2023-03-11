@@ -51,7 +51,7 @@ switch true do
 	case (_group_player in group_1pl): {disableRemoteSensors true;};
 	case (_group_player in group_2pl): {disableRemoteSensors true;};
 	case (_group_player in group_3pl): {disableRemoteSensors true;};
-	case (_group_player in group_4pl_hq): {disableRemoteSensors true;};
+	case (_group_player in group_4pl): {disableRemoteSensors true;};
 	case (_group_player in group_13aasr): {disableRemoteSensors true;};
 	case (_group_player in group_16csmr): {disableRemoteSensors true;};
 	case (_group_player in group_jfist): {disableRemoteSensors true;};
