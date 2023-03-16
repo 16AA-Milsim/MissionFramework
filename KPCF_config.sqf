@@ -326,7 +326,13 @@ KPCF_items = [
     "pook_camonet_med_west_drop5",      //3 Man DPM Desert
     "pook_camonet_med_west_drop13",     //3 Man DPM Woodland
     "pook_camonet_small_west_drop5",    //2 Man DPM Desert
-    "pook_camonet_small_west_drop13"    //2 Man DPM Woodland
+    "pook_camonet_small_west_drop13",    //2 Man DPM Woodland
+    //Placeable Flags
+    "ace_marker_flags_black",
+    "ace_marker_flags_blue",
+    "ace_marker_flags_green",
+    "ace_marker_flags_red",
+    "ace_marker_flags_white"
 ];
 
 // Defines the available backpacks
