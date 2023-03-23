@@ -41,11 +41,11 @@ KPCF_interactRadius = 5;
 
 // Defines the available crates
 KPCF_crates = [
-    "LSR_Crates_pelican_Empty_S",
-    "LSR_Crates_pelican_Empty_M",
-    "LSR_Crates_pelican_Empty_L",
-    "LSR_Crates_pelican_pallet_L",
-    "LSR_Crates_pelican_pallet_M",
+    "afuk_crates_pelican_empty_L",
+    "afuk_crates_pelican_empty_M",
+    "afuk_crates_pelican_pallet_M",
+    "afuk_crates_pelican_pallet_L",
+    "afuk_crates_pelican_empty_S",
     "ACE_medicalSupplyCrate_advanced"
 ];
 
