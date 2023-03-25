@@ -32,10 +32,8 @@ if (_crateIndex == -1) exitWith {
 // Crate selection
 private _crateType = _ctrlCrate lbData _crateIndex;
 
-private _checkSpawn = false;
-
 // Spawn crate
-private _crate = createVehicle [_crateType, ((getPos KPCF_activeSpawn) findEmptyPosition [0, 10, _crateType]), [], 0, "NONE"]; //TODO deal with empty array return
+private _crate = createVehicle [_crateType, ((getPos KPCF_activeSpawn) findEmptyPosition [0, KPCF_spawnRadius, _crateType]), [], 0, "NONE"]; //TODO deal with empty array return
 
 //IF enabled set ACE Cargo size of spawned crates to one
 if (KPCF_ace && KPCF_ace_cargo_one && (_crate isKindOf "ThingX")) then {
