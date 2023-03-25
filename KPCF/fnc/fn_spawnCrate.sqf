@@ -34,18 +34,8 @@ private _crateType = _ctrlCrate lbData _crateIndex;
 
 private _checkSpawn = false;
 
-// Check if spawnpoint is clear
-if (KPCF_activeSpawn != KPCF_activeBase) then {
-    _checkSpawn = true;
-};
-
-if ((!(((getPos KPCF_activeSpawn) nearEntities 5) isEqualTo [])) && _checkSpawn) exitWith {
-    hint localize "STR_KPCF_HINTZONE";
-    [{hintSilent "";}, [], 3] call CBA_fnc_waitAndExecute;
-};
-
 // Spawn crate
-private _crate = createVehicle [_crateType, ((getPos KPCF_activeSpawn) findEmptyPosition [0, 10, _crateType]), [], 0, "NONE"];
+private _crate = createVehicle [_crateType, ((getPos KPCF_activeSpawn) findEmptyPosition [0, 10, _crateType]), [], 0, "NONE"]; //TODO deal with empty array return
 
 //IF enabled set ACE Cargo size of spawned crates to one
 if (KPCF_ace && KPCF_ace_cargo_one && (_crate isKindOf "ThingX")) then {
