@@ -42,6 +42,8 @@ switch (_catIndex) do {
 
     // Magazines
     case 1 : {
+        // exit if not of type CfgWeapons
+        if (!isArray (configfile >> "CfgWeapons" >> _weaponType >> "muzzles")) exitWith {};
         // Get compatible magazines
         private _glType = (getArray (configfile >> "CfgWeapons" >> _weaponType >> "muzzles")) select 1;
         private _magazines = [_weaponType] call CBA_fnc_compatibleMagazines;
@@ -62,7 +64,7 @@ switch (_catIndex) do {
     // Attachments
     case 2 : {
         // Get compatible attachments
-        private _attachments = [_weaponType] call BIS_fnc_compatibleItems;
+        private _attachments = compatibleItems _weaponType;
         private _sortedAttachments = [_attachments] call KPCF_fnc_sortList;
 
         private _index = 0;
