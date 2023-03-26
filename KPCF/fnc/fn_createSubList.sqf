@@ -71,7 +71,7 @@ switch (_catIndex) do {
     case 2 : {
         // Get compatible attachments
         private _attachments = [_weaponType] call BIS_fnc_compatibleItems;
-        private "_filtereAttachments";
+        private "_filteredAttachments";
         if (!KPCF_generateLists) then {
             _filteredAttachments = _attachments arrayIntersect KPCF_attachments;
         }
@@ -91,3 +91,6 @@ switch (_catIndex) do {
         } forEach _sortedAttachments;
     };
 };
+
+// Select first entry
+_ctrlEquipment lbSetCurSel 0;
