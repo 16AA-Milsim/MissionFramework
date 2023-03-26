@@ -2,6 +2,7 @@
     Killah Potatoes Cratefiller v1.1.0
 
     Author: Dubjunk - https://github.com/KillahPotatoes
+    Edited by Mildly_Interested - https://github.com/MildlyInterested
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
     Description:
@@ -46,7 +47,7 @@ switch (_catIndex) do {
         private _glType = (getArray (configfile >> "CfgWeapons" >> _weaponType >> "muzzles")) select 1;
         private _magazines = [_weaponType] call CBA_fnc_compatibleMagazines;
         _magazines append ([configfile >> "CfgWeapons" >> _weaponType >> _glType] call CBA_fnc_compatibleMagazines);
-        private _filteredmagazines = _magazines arrayIntersect KPCF_weapons;
+        private _filteredmagazines = _magazines arrayIntersect KPCF_magazines;
         private _sortedMagazines = [_filteredmagazines] call KPCF_fnc_sortList;
 
         private _index = 0;
@@ -64,7 +65,7 @@ switch (_catIndex) do {
     case 2 : {
         // Get compatible attachments
         private _attachments = [_weaponType] call BIS_fnc_compatibleItems;
-        private _filteredattachments = _attachments arrayIntersect KPCF_weapons;
+        private _filteredattachments = _attachments arrayIntersect KPCF_attachments;
         private _sortedAttachments = [_filteredattachments] call KPCF_fnc_sortList;
 
         private _index = 0;
