@@ -2,7 +2,7 @@
 
 ### This contains all scripts and files necessary for 16AA Missions
 
-`last updated 2023_04_12`
+`last updated 2023_04_18`
 
 #### How to use:
 
@@ -30,11 +30,12 @@
 
 Plugins:
 
-* [SQF Language](https://marketplace.visualstudio.com/items?itemName=Armitxes.sqf) for syntax highlighting
+* [SQF Language](https://marketplace.visualstudio.com/items?itemName=blackfisch.sqf-language) for syntax highlighting
 * [SQFLint](https://marketplace.visualstudio.com/items?itemName=skacekachna.sqflint) for error checking
 * [SQF Wiki](https://marketplace.visualstudio.com/items?itemName=EelisLynne.sqf-wikihttps:/) for quick wiki lookup
 * [Open RPT](https://marketplace.visualstudio.com/items?itemName=bux578.vscode-openlastrpt) to quickly open your latest log file
-* [Markdown Editor](https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor) to preview pretty markdown files like this one
+* [HEMTT](https://marketplace.visualstudio.com/items?itemName=BrettMayson.hemtt) to preview PAA files
+* [Markdown](https://marketplace.visualstudio.com/items?itemName=bierner.github-markdown-preview) to preview and edit pretty markdown files like this one
 
 ---
 
