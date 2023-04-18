@@ -90,11 +90,11 @@ KPCF_weapons = [
     "rhs_weap_M107",
     "rhs_weap_maaws",
     "rhs_optic_maaws",
-    "rhs_mag_maaws_HEDP",
+    "rhs_mag_maaws_HEAT",
     "UK3CB_BAF_556_30Rnd",
     "UK3CB_BAF_L85A3_UGL",
     "UK3CB_BAF_L135A1",
-    "rhs_mag_M433_HEDP",
+    "rhs_mag_M441_HE",
     "rhs_mag_m4009",
     "rhs_mag_M583A1_white",
     "rhs_mag_M585_white_cluster",
@@ -153,11 +153,8 @@ KPCF_weapons = [
     "ace_compat_rhs_usf3_mag_TOW2b",
     "ace_compat_rhs_usf3_mag_TOW2bb",
     "Starstreak",
-    "Starstreak2_missile",
-    "RW_556_Bandolier",
-    "RW_762Mag_Bandolier",
-    "RW_762Link_Bandolier"
-];
+    "Starstreak2_missile"
+    ];
 
 // Defines the available grenades
 KPCF_grenades = [
