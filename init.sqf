@@ -41,8 +41,6 @@ player addrating 90000;
 ["ACRE_PRC152", "default", 9, "description", "Flight (Utility)"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 10, "description", "Battalion net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 11, "description", "P Plt Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC152", "default", 12, "description", "Med Int Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC152", "default", 13, "description", "4Plt Int Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 1, "description", "1 Plt Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 2, "description", "2 Plt Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 3, "description", "3 Plt Net"] call acre_api_fnc_setPresetChannelField;
@@ -54,8 +52,5 @@ player addrating 90000;
 ["ACRE_PRC117F", "default", 9, "description", "Flight (Utility)"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 10, "description", "Battalion net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 11, "description", "P Plt Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC117F", "default", 12, "description", "Med Int Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC117F", "default", 13, "description", "4Plt Int Net"] call acre_api_fnc_setPresetChannelField;
-
 
 //Add mission specific scripts after here!
