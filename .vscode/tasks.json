@@ -1,0 +1,69 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Validate SQF",
+            "command": "python",
+            "options": {
+                "cwd": "${workspaceFolder}/tools"
+            },
+            "args": [
+                "sqf_validator.py"
+            ]
+        },
+        {
+            "label": "Validate Config",
+            "command": "python",
+            "options": {
+                "cwd": "${workspaceFolder}/tools"
+            },
+            "args": [
+                "config_style_checker.py"
+            ]
+        },
+        {
+            "label": "Validate Stringtables",
+            "command": "python",
+            "options": {
+                "cwd": "${workspaceFolder}/tools"
+            },
+            "args": [
+                "stringtable_validator.py"
+            ]
+        },
+        {
+            "label": "Check Strings",
+            "command": "python",
+            "options": {
+                "cwd": "${workspaceFolder}/tools"
+            },
+            "args": [
+                "check_strings.py"
+            ]
+        },
+        {
+            "label": "SQFVM Checker",
+            "command": "python",
+            "options": {
+                "cwd": "${workspaceFolder}/tools"
+            },
+            "args": [
+                "sqfvmChecker.py"
+            ]
+        },
+        {
+            "label": "Test All",
+            "dependsOn": [
+                "Validate SQF",
+                "Validate Config",
+                "Validate Stringtables",
+                "Check Strings",
+                "SQFVM Checker"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+        }
+    ]
+}
