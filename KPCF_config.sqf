@@ -84,16 +84,17 @@ KPCF_whitelistedItems = [
 
 // Defines the available weapons
 KPCF_weapons = [
-    "UK3CB_BAF_L85A3",
-    "rhs_weap_M107_w",
     "rhs_weap_M107_d",
-    "rhs_weap_M107",
+    "UK3CB_BAF_556_200Rnd",
+    "rhsusf_mag_10Rnd_STD_50BMG_mk211",
+    "rhsusf_mag_10Rnd_STD_50BMG_M33",
     "rhs_weap_maaws",
     "rhs_optic_maaws",
-    "rhs_mag_maaws_HEAT",
+    "MAA_MAAWS_MT756",
+    "MAA_MAAWS_ASM509",
+    "MAA_MAAWS_GMM_HEAT",
+    "MAA_MAAWS_SMOKE469",
     "UK3CB_BAF_556_30Rnd",
-    "UK3CB_BAF_L85A3_UGL",
-    "UK3CB_BAF_L135A1",
     "rhs_mag_M441_HE",
     "rhs_mag_m4009",
     "rhs_mag_M583A1_white",
@@ -114,8 +115,6 @@ KPCF_weapons = [
     "UK3CB_BAF_762_200Rnd_T",
     "UK3CB_BAF_L129A1",
     "UK3CB_BAF_762_L42A1_20Rnd",
-    "rhsusf_mag_10Rnd_STD_50BMG_mk211",
-    "rhsusf_mag_10Rnd_STD_50BMG_M33",
     "16aa_Weapons_L115A3_OD",
     "16aa_Weapons_L115A3_DD",
     "16aa_Weapons_L115A3_SN",
@@ -124,7 +123,6 @@ KPCF_weapons = [
     "16AA_Magazine_338SP_NT",
     "16AA_Magazine_338SP_T",
     "UK3CB_BAF_L110_762",
-    "UK3CB_BAF_L131A1",
     "UK3CB_BAF_9_17Rnd",
     "UK3CB_BAF_M6",
     "UK3CB_BAF_1Rnd_60mm_Mo_AB_Shells",
@@ -133,13 +131,14 @@ KPCF_weapons = [
     "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_Red",
     "UK3CB_BAF_1Rnd_60mm_Mo_WPSmoke_White",
     "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",
-    "ace_compat_rhs_usf3_m252_carry",
-    "ace_csw_carryMortarBaseplate",
-    "ACE_1Rnd_82mm_Mo_HE_Guided",
-    "ACE_1Rnd_82mm_Mo_HE",
-    "ACE_1Rnd_82mm_Mo_Illum",
-    "ACE_1Rnd_82mm_Mo_HE_LaserGuided",
-    "ACE_1Rnd_82mm_Mo_Smoke",
+    "UK3CB_BAF_L16",
+    "UK3CB_BAF_L16_Tripod",
+    "UK3CB_BAF_1Rnd_81mm_Mo_Shells",
+    "UK3CB_BAF_1Rnd_81mm_Mo_IRFlare_White",
+    "UK3CB_BAF_1Rnd_81mm_Mo_Smoke_Red",
+    "UK3CB_BAF_1Rnd_81mm_Mo_Flare_White",
+    "UK3CB_BAF_1Rnd_81mm_Mo_WPSmoke_White",
+    "UK3CB_BAF_1Rnd_81mm_Mo_Smoke_White",
     "16aa_Weapon_FGM_148_Javelin",
     "16aa_Magazine_Javelin_Tube",
     "rhs_weap_fim92",
@@ -149,12 +148,11 @@ KPCF_weapons = [
     "UK3CB_BAF_L134A1",
     "UK3CB_BAF_32Rnd_40mm_G_Box",
     "UK3CB_BAF_Tripod",
-    "rhs_weap_m72a7",
     "ace_compat_rhs_usf3_mag_TOW2b",
     "ace_compat_rhs_usf3_mag_TOW2bb",
     "Starstreak",
     "Starstreak2_missile"
-    ];
+];
 
 // Defines the available grenades
 KPCF_grenades = [
@@ -189,7 +187,10 @@ KPCF_explosives = [
     "ClaymoreDirectionalMine_Remote_Mag",   //M18A1 Claymore
     "rhsusf_mine_m49a1_3m_mag",             //Tripwire Flare mine 3m
     "rhsusf_mine_m49a1_6m_mag",             //Tripwire Flare mine 6m
-    "rhsusf_mine_m49a1_10m_mag"             //Tripwire Flare mine 10m
+    "rhsusf_mine_m49a1_10m_mag",             //Tripwire Flare mine 10m
+    "tsp_frameCharge_mag",
+    "tsp_popperCharge_mag",
+    "tsp_stickCharge_mag"
 ];
 
 // Defines the available items
@@ -218,33 +219,47 @@ KPCF_items = [
     "ACE_tourniquet",
     //KAT Medical
     "kat_aatKit",
+    "kat_IV_16",
     "kat_accuvac",
     "kat_X_AED",
+    "kat_amiodarone",
+    "kat_CarbonateItem",
+    "kat_atropine",
     "kat_AED",
+    "kat_crossPanel",
+    "kat_bloodIV_O_N",
+    "kat_bloodIV_O_N_500",
+    "kat_bloodIV_O_N_250",
+    "kat_plate",
     "kat_chestSeal",
+    "kat_clamp",
+    "kat_vacuum",
+    "kat_EACA",
+    "kat_etomidate",
+    "kat_IO_FAST",
+    "kat_fentanyl",
     "KAT_Empty_bloodIV_250",
     "KAT_Empty_bloodIV_500",
+    "kat_flumazenil",
     "kat_guedel",
+    "kat_ketamine",
     "kat_larynx",
-    "kat_Pulseoximeter",
-    "kat_stethoscope",
-    "kat_IV_16",
-    "kat_amiodarone",
-    "kat_bloodIV_O",
-    "kat_bloodIV_A",
-    "kat_bloodIV_AB",
-    "kat_bloodIV_B",
-    "kat_IO_FAST",
     "kat_lidocaine",
+    "kat_lorazepam",
+    "kat_nalbuphine",
+    "kat_naloxone",
+    "kat_ncdKit",
     "kat_nitroglycerin",
     "kat_norepinephrine",
+    "kat_PainkillerItem",
     "kat_phenylephrine",
+    "kat_Pulseoximeter",
+    "kat_retractor",
+    "kat_scalpel",
+    "kat_stethoscope",
     "kat_TXA",
-    "kat_Carbonate",
-    "kat_naloxone",
     //ACE Items
-    "ACE_RangeTable_82mm",
-    "ACE_artilleryTable",
+    "UK3CB_BAF_L16_RangeTable",
     "ACE_ATragMX",
     "ACE_CableTie",
     "ACE_DefusalKit",
@@ -265,7 +280,7 @@ KPCF_items = [
     "ACE_Tripod",
     "ACE_Vector",
     "ACE_wirecutter",
-    "ACE_VMH3",
+    "ACE_VMM3",
     "ACE_Humanitarian_Ration",
     "ACE_Sunflower_Seeds",
     "ACE_WaterBottle",
@@ -291,9 +306,6 @@ KPCF_items = [
     "uk3cb_underbarrel_acc_fgrip_bipod",
     "UK3CB_BAF_HMNVS",
     "UK3CB_BAF_Soflam_Laserdesignator",
-    "rksl_optic_lds",
-    "uk3cb_baf_sffh",
-    "uk3cb_underbarrel_acc_grippod",
     "rksl_optic_pmii_525",
     "lsr_attachment_338_suppressor_black",
     "uk3cb_baf_silencer_l110",
@@ -301,7 +313,6 @@ KPCF_items = [
     "rhsusf_acc_nt4_black",
     "rhsusf_acc_sf3p556",
     "rhsusf_acc_grip1",
-    "UK3CB_BAF_Bayonet_L3A1",
     "rhs_altyn_visordown",
     //Misc Items
     "V_EOD_olive_F",
@@ -309,32 +320,13 @@ KPCF_items = [
     "B_UavTerminal",
     "Attachable_Helistretcher",
     "Laserbatteries",
-    "FISH_Cream_Kit_Europe",
-    //Signal Panels
-    "pook_minespanel_drop",     //Mines Panel
-    "pook_SignalMarker1_R",     //HLS Panel Triangle Red
-    "pook_SignalMarker2_R",
-    "pook_SignalMarker3_R",
-    "pook_SignalMarker4_R",
-    "pook_SignalMarker5_R",
-    "pook_SignalMarker6_R",
-    "pook_SignalMarker7_R",
-    //Camo Nets
-    "pook_camonet_land_west_drop5",     //Big DPM Desert
-    "pook_camonet_land_west_drop13",    //Big DPM Woodland
-    "pook_camonet_med_west_drop5",      //3 Man DPM Desert
-    "pook_camonet_med_west_drop13",     //3 Man DPM Woodland
-    "pook_camonet_small_west_drop5",    //2 Man DPM Desert
-    "pook_camonet_small_west_drop13"    //2 Man DPM Woodland
+    "FISH_Cream_Kit_Europe"
 ];
 
 // Defines the available backpacks
 KPCF_backpacks = [
-    "mpx_daysack",
     "rhsusf_eject_Parachute_backpack",
     "rhs_Tow_Gun_Bag",
     "rhs_TOW_Tripod_Bag",
-    "B_rhsusf_B_BACKPACK",
-    "UK3CB_BAF_B_Bergen_MTP_Rifleman_XL_A",
-    "B_UGV_02_Demining_backpack_F"
+    "B_rhsusf_B_BACKPACK"
 ];
