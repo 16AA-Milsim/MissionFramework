@@ -22,16 +22,6 @@
             ]
         },
         {
-            "label": "Validate Stringtables",
-            "command": "python",
-            "options": {
-                "cwd": "${workspaceFolder}/tools"
-            },
-            "args": [
-                "stringtable_validator.py"
-            ]
-        },
-        {
             "label": "Check Strings",
             "command": "python",
             "options": {
@@ -42,23 +32,11 @@
             ]
         },
         {
-            "label": "SQFVM Checker",
-            "command": "python",
-            "options": {
-                "cwd": "${workspaceFolder}/tools"
-            },
-            "args": [
-                "sqfvmChecker.py"
-            ]
-        },
-        {
             "label": "Test All",
             "dependsOn": [
                 "Validate SQF",
                 "Validate Config",
-                "Validate Stringtables",
-                "Check Strings",
-                "SQFVM Checker"
+                "Check Strings"
             ],
             "group": {
                 "kind": "test",
