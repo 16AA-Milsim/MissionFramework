@@ -145,25 +145,39 @@ _player addMPEventHandler ["MPRespawn", {
 //put unconsious players in spectator mode
 ["ace_unconscious", {
     params ["_unit", "_enable"];
-    if (_unit isNotEqualTo player) exitWith {};
+    if (_unit isNotEqualTo player) exitWith {}; //don't run for remote controlled units
     if (_enable) then {
         _unit setVariable ["ace_medical_feedback_effectUnconsciousTimeout", 10e10];
+		[{
+			[["You are unconscious.", 1.5, [1, 0, 0, 1]], ["Entering spectator...", 1, [1, 1, 1, 1]], true] call CBA_fnc_notify;
+		}, nil, 1.5] call CBA_fnc_waitAndExecute;
         [{
             if (!(player getVariable ["ace_isunconscious", false]) || {!alive player}) exitWith {};
             [true, true, false] call ace_spectator_fnc_setSpectator;
 			[[west], [east,resistance,civilian]] call ace_spectator_fnc_updateSides;
-			[units player, allPlayers - units player] call ace_spectator_fnc_updateUnits; //TODO: only allow group, currently allows all
+			[units player, (units west - units player)] call ace_spectator_fnc_updateUnits; //TODO: only allows players in group, but allows all AI
 			[[1,2], [0]] call ace_spectator_fnc_updateCameraModes;
 			[[-2,-1], [0,1,2,3,4,5,6,7]] call ace_spectator_fnc_updateVisionModes;
-            [{
-                hint "You are unconscious!";
-            }, nil, 0.5] call CBA_fnc_waitAndExecute;
+			[["You can spectate anyone within your section.", 1, [1, 1, 1, 1]], ["You will leave spectator once revived or dead.", 1, [1, 1, 1, 1]], true] call CBA_fnc_notify;
         }, nil, 5] call CBA_fnc_waitAndExecute;
     } else {
-        [false] call ace_spectator_fnc_setSpectator;
+        [false, true, false] call ace_spectator_fnc_setSpectator;
     };
 }] call CBA_fnc_addEventHandler;
-//remove spectator from respawned units
-_player addEventHandler ["Respawn", { //TODO: figure out way to remove spectator earlier to avoid stacked UIs in respawn selection
-	[false] call ace_spectator_fnc_setSpectator;
+//TODO: all spectator can talk amongst themselves, might be fixed by forcing spectator volume to 0 so they can't hear each other?
+//TODO: spectators can spectate players who die and respawn, regardless of blacklisting. Maybe global EH to update blacklists on player death?
+//remove spectator from respawned players
+player addEventHandler ["Respawn", { //TODO: figure out way to remove spectator earlier to avoid stacked UIs in respawn selection
+	params ["_unit", "_corpse"];
+	if (_unit isNotEqualTo player) exitWith {};
+	[units player, (units west - units player)] remoteExecCall ["ace_spectator_fnc_updateUnits", -2, false]; //TODO: don't hardcode side, you can use (units (side player) - units player)
+	[false, true, false] call ace_spectator_fnc_setSpectator;
+}];
+
+//tell players to ignore spectator UI in respawn location selection
+player addEventHandler ["Killed", {
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+	[{
+		[["Ignore the Spectator UI", 1, [1, 0, 0, 1]], true] call CBA_fnc_notify;
+	}, nil, 1] call CBA_fnc_waitAndExecute;
 }];
