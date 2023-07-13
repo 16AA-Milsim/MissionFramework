@@ -88,12 +88,8 @@ KPCF_weapons = [
     "UK3CB_BAF_556_200Rnd",
     "rhsusf_mag_10Rnd_STD_50BMG_mk211",
     "rhsusf_mag_10Rnd_STD_50BMG_M33",
-    "rhs_weap_maaws",
-    "rhs_optic_maaws",
-    "MAA_MAAWS_MT756",
-    "MAA_MAAWS_ASM509",
-    "MAA_MAAWS_GMM_HEAT",
-    "MAA_MAAWS_SMOKE469",
+    "launch_MRAWS_green_rail_F",
+    "MAA_MAAWS_HEDP502",    
     "UK3CB_BAF_556_30Rnd",
     "rhs_mag_M441_HE",
     "rhs_mag_m4009",
@@ -187,10 +183,7 @@ KPCF_explosives = [
     "ClaymoreDirectionalMine_Remote_Mag",   //M18A1 Claymore
     "rhsusf_mine_m49a1_3m_mag",             //Tripwire Flare mine 3m
     "rhsusf_mine_m49a1_6m_mag",             //Tripwire Flare mine 6m
-    "rhsusf_mine_m49a1_10m_mag",             //Tripwire Flare mine 10m
-    "tsp_frameCharge_mag",
-    "tsp_popperCharge_mag",
-    "tsp_stickCharge_mag"
+    "rhsusf_mine_m49a1_10m_mag"             //Tripwire Flare mine 10m
 ];
 
 // Defines the available items

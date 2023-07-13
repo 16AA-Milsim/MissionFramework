@@ -9,7 +9,7 @@
 1. Make sure you haven't set mission name or any other mission options in the editor.
    If you did go back to your editor and remove them.
 2. Download the latest version by clicking on the green code icon in the top right and selecting "Download ZIP".
-   To check if your local framework version it outdated check the last updated 2023_05_28
+   To check if your local framework version it outdated check line 5 in this file.
    ![image](https://user-images.githubusercontent.com/57712666/148797426-1b586d29-d117-49c3-841c-29373a24a59c.png)
 3. Extract it, copy contents of folder to your mission folder
    It should look like this:

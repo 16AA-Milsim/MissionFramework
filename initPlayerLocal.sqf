@@ -1,4 +1,4 @@
-player addGoggles "Rev_Shades_Yellow"; //add to every player
+player addGoggles "UK3CB_G_Tactical_Black_Tactical_Gloves_Tan"; //add to every player
 waitUntil {!isNull player};
 
 if (player getVariable ["16AA_Laserdesignator_Backpack", false]) then {
@@ -27,7 +27,6 @@ group_hq = ["Coy HQ"];
 group_itc = ["ITC"];
 group_jhc = ["JHC"];
 group_mi = ["MI"];
-group_pf = ["6-0"];
 [player, ""] call BIS_fnc_setUnitInsignia; 
 switch true do
 {
@@ -42,7 +41,6 @@ switch true do
 	case (_group_player in group_itc): {[player,"16aa_w_gs_itc_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_jhc): {[player,"16aa_w_gs_jhc_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_mi): {[player,"16aa_w_gs_mi_dzf"] call BIS_fnc_setUnitInsignia;};
-	case (_group_player in group_pf): {[player,"16aa_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
 	default {[player,"16aa_w_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
 };
 //disable remote sensor on players who do not need to check AI raycasts
@@ -59,7 +57,6 @@ switch true do
 	case (_group_player in group_itc): {};
 	case (_group_player in group_jhc): {};
 	case (_group_player in group_mi): {};
-	case (_group_player in group_pf): {disableRemoteSensors true;};
 	default {};
 };
 
