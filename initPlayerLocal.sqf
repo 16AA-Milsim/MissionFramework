@@ -12,7 +12,7 @@ FW_Acre_Volume_Value = 0.25;
  
 [{ 
     acre_sys_gui_volumeLevel = FW_Acre_Volume_Value; 
-}, [], 1] call CBA_fnc_waitAndExecute;
+}, [], 5] call CBA_fnc_waitAndExecute;
 
 // Set appropriate 16AA Drop Zone Flash for the players
 _group_player = groupId (group player);
