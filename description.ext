@@ -225,4 +225,5 @@ class CfgFunctions
 {
 	#include "taw_vd\cfgfunctions.hpp"
   	#include "KPCF\KPCF_functions.hpp"
+    #include "16AA_ACRE\cfgfunctions.hpp"
 };
