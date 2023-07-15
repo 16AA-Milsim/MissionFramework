@@ -4,14 +4,14 @@ _settingsBranch = ["Settings_Branch", "Radio Settings", "", {}, {true}] call ace
 
 // Show Instructions Action
 _instructionsStatement = {
-    call One6AA_acre_fnc_showInstructions;
+    call l6AA_acre_fnc_showInstructions;
 };
 _instructionsAction = ["Instructions_Action", "Instructions", "", _instructionsStatement, {true}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch"], _instructionsAction] call ace_interact_menu_fnc_addActionToClass;
 
 // Show Saved Radio Settings Action
 _confirmStatement = {
-    call One6AA_acre_fnc_showRadios;
+    call l6AA_acre_fnc_showRadios;
 };
 _showRadioSettingsAction = ["Show_Radio_Settings_Action", "Show Saved Radio Settings", "", _confirmStatement, {true}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch"], _showRadioSettingsAction] call ace_interact_menu_fnc_addActionToClass;
@@ -21,7 +21,7 @@ _restoreRadioSettingsBranch = ["Restore_Radio_Settings_Branch", "<t color='#98d7
 [(typeOf player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch"], _restoreRadioSettingsBranch] call ace_interact_menu_fnc_addActionToClass;
 // Confirm Restore action
 _confirmStatement = {
-    call One6AA_acre_fnc_restoreRadios;
+    call l6AA_acre_fnc_restoreRadios;
 };
 _confirmAction = ["Confirm_Restore_Radio_Settings", "<t color='#98d7ff'>Confirm</t>", "", _confirmStatement, {true}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch", "Restore_Radio_Settings_Branch"], _confirmAction] call ace_interact_menu_fnc_addActionToClass;
@@ -31,7 +31,7 @@ _saveRadioSettingsBranch = ["Save_Radio_Settings_Branch", "<t color='#ffa4a4'>Sa
 [(typeOf player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch"], _saveRadioSettingsBranch] call ace_interact_menu_fnc_addActionToClass;
 // Confirm Save action
 _confirmStatement = {
-    call One6AA_acre_fnc_saveRadios;
+    call l6AA_acre_fnc_saveRadios;
 };
 _confirmAction = ["Confirm_Save_Radio_Settings", "<t color='#ffa4a4'>Confirm</t>", "", _confirmStatement, {true}] call ace_interact_menu_fnc_createAction;
 [(typeOf player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch", "Save_Radio_Settings_Branch"], _confirmAction] call ace_interact_menu_fnc_addActionToClass;
