@@ -1,4 +1,4 @@
-_group_player = groupId (group player);
+params ["_group_player"];
 [player, ""] call BIS_fnc_setUnitInsignia; 
 switch true do
 {

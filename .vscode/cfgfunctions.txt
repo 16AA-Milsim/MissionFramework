@@ -127,12 +127,26 @@ class KPCF {
 class l6AA_acre{
 	tag = "l6AA_acre";
 	class functions{
-		file = "16AA_ACRE\functions";
+		file = "l6AA_ACRE\functions";
 		class postInit{postInit = 1;};
+		class restoreRadios{};
+		class restoreRadiosOnRespawn{};
+		class saveRadios{};
+		class setSpeechVolume{};
 		class setupInteractions{};
 		class showInstructions{};
-		class restoreRadios{};
-		class saveRadios{};
 		class showRadios{};
+	}
+}
+class l6AA{
+	tag = "l6AA";
+	class functions{
+		file = "l6AA\functions";
+		class postInit{postInit = 1;};
+		class disableRemoteSensors{};
+		class logPerformance{};
+		class logStart{};
+		class restoreInsigniasOnRespawn{};
+		class setInsignias{};
 	}
 }

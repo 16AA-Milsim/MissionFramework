@@ -1,8 +1,11 @@
-player addGoggles "UK3CB_G_Tactical_Black_Tactical_Gloves_Tan"; //add to every player
+params ["_player", "_didJIP"];
+private _group_player = groupId (group player); //get player group
+
+_player addGoggles "UK3CB_G_Tactical_Black_Tactical_Gloves_Tan"; //add to every player
 waitUntil {!isNull player};
 
-if (player getVariable ["16AA_Laserdesignator_Backpack", false]) then {
-  player addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
+if (_player getVariable ["16AA_Laserdesignator_Backpack", false]) then {
+  _player addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
 };
 
 // Define groups
@@ -18,4 +21,6 @@ group_itc = ["ITC"];
 group_jhc = ["JHC"];
 group_mi = ["MI"];
 
-//Event Handlers
+[_group_player] call l6AA_fnc_disableRemoteSensors;
+[_group_player] call l6AA_fnc_setInsignias;
+[_player] call l6AA_fnc_restoreInsigniasOnRespawn;

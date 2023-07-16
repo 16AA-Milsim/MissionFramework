@@ -1,3 +1,4 @@
+params ["_group_player"];
 //disable remote sensor on players who do not need to check AI raycasts
 switch true do
 {
