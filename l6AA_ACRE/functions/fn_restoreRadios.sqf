@@ -1,8 +1,8 @@
 // get saved variables/arrays from profileNamespace
-private _baseRadios = profileNamespace getVariable ["radios_base", []];
-private _channels = profileNamespace getVariable ["radios_channel", []];
-private _volumes = profileNamespace getVariable ["radios_volume", []];
-private _spatials = profileNamespace getVariable ["radios_spatial", []];
+private _baseRadios = profileNamespace getVariable ["l6AA_ACRE_radios_base", []];
+private _channels = profileNamespace getVariable ["l6AA_ACRE_radios_channel", []];
+private _volumes = profileNamespace getVariable ["l6AA_ACRE_radios_volume", []];
+private _spatials = profileNamespace getVariable ["l6AA_ACRE_radios_spatial", []];
 
 // Get the radio list from the player's inventory
 private _radios = [] call acre_api_fnc_getCurrentRadioList;

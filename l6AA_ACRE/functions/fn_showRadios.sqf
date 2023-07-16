@@ -1,8 +1,8 @@
 // get the profileNamespace Radio Settings variables
-private _baseRadios = profileNamespace getVariable ["radios_base", []];
-private _channels = profileNamespace getVariable ["radios_channel", []];
-private _volumes = profileNamespace getVariable ["radios_volume", []];
-private _spatials = profileNamespace getVariable ["radios_spatial", []];
+private _baseRadios = profileNamespace getVariable ["l6AA_ACRE_radios_base", []];
+private _channels = profileNamespace getVariable ["l6AA_ACRE_radios_channel", []];
+private _volumes = profileNamespace getVariable ["l6AA_ACRE_radios_volume", []];
+private _spatials = profileNamespace getVariable ["l6AA_ACRE_radios_spatial", []];
 
 // Check if previous settings exist, if not exit with a hint
 if (_baseRadios isEqualTo []) exitWith {
