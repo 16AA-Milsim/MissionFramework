@@ -1,18 +1,5 @@
 //anything in here gets executed on all clients+server on mission start (be aware of locality! and scripts with global effect)
 //add Mission specific scripts at the end!
-diag_log "--------------------[LOGGING] [MISSIONSTART]--------------------"; //Mission Start logging
-diag_log "----------------------------------------------------------------";
-diag_log format ["--------------------[LOGGING] [%1]--------------------", briefingName];
-diag_log "----------------------------------------------------------------";
-diag_log "--------------------[LOGGING] [MISSIONSTART]--------------------";
-
-if (!isDedicated && !hasInterface && isMultiplayer) then { //anything in here gets executed on the headless clients
-    //[] execVM "scripts\show_fps.sqf";   //excute show FPS marker
-    //diag_log "--------------[LOGGING] [Executed show_fps on HC]---------------"; //this will only show in  the HCs logs
-    //not needed anymore, done by ZHC mod
-};
-
-execVM "scripts\logging.sqf"; //run logging script
 
 // Removes the ability to turn grass off
 tawvd_disablenone = true;
