@@ -8,5 +8,6 @@ class l6AA{
 		class logStart{};
 		class restoreInsigniasOnRespawn{};
 		class setInsignias{};
+		class ZHCblacklistAIVehicles{};
 	}
 }
