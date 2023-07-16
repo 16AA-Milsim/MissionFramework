@@ -52,7 +52,7 @@ _radios = _tempRadios;
 // Save the variables/arrays to the profileNamespace
 profileNamespace setVariable ["l6AA_ACRE_radios_base", _baseRadios];
 profileNamespace setVariable ["l6AA_ACRE_radios_channel", _channels];
-profileNamespace setVariable ["l6_AA_ACRE_radios_volume", _volumes];
-profileNamespace setVariable ["l6_AA_ACRE_radios_spatial", _spatials];
+profileNamespace setVariable ["l6AA_ACRE_radios_volume", _volumes];
+profileNamespace setVariable ["l6AA_ACRE_radios_spatial", _spatials];
 
 hint "Radio Settings Saved";
