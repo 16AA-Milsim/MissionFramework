@@ -209,7 +209,7 @@ _confirmAction = ["Confirm_Save_Radio_Settings", "<t color='#ffa4a4'>Confirm</t>
             [true, true, false] call ace_spectator_fnc_setSpectator;
 			[[west], [east,resistance,civilian]] call ace_spectator_fnc_updateSides;
 			[units player, (units west - units player)] call ace_spectator_fnc_updateUnits; //TODO: only allows players in group, but allows all AI
-			[[1,2], [0]] call ace_spectator_fnc_updateCameraModes;
+			[[1], [0,2]] call ace_spectator_fnc_updateCameraModes;
 			[[-2,-1], [0,1,2,3,4,5,6,7]] call ace_spectator_fnc_updateVisionModes;
 			[["You can spectate anyone within your section.", 1, [1, 1, 1, 1]], ["You will leave spectator once revived or dead.", 1, [1, 1, 1, 1]], true] call CBA_fnc_notify;
         }, nil, 5] call CBA_fnc_waitAndExecute;
