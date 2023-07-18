@@ -38,9 +38,10 @@ player addrating 90000;
 ["ACRE_PRC152", "default", 6, "description", "Fires Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 7, "description", "Flight (Internal)"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 8, "description", "Flight (CAS)"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC152", "default", 9, "description", "Flight (Utility)"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 9, "description", "Logistics"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 10, "description", "Battalion net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 11, "description", "P Plt Net"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 12, "description", "Med Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 1, "description", "1 Plt Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 2, "description", "2 Plt Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 3, "description", "3 Plt Net"] call acre_api_fnc_setPresetChannelField;
@@ -49,8 +50,9 @@ player addrating 90000;
 ["ACRE_PRC117F", "default", 6, "description", "Fires Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 7, "description", "Flight (Internal)"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 8, "description", "Flight (CAS)"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC117F", "default", 9, "description", "Flight (Utility)"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC117F", "default", 9, "description", "Logistics"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 10, "description", "Battalion net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 11, "description", "P Plt Net"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC117F", "default", 12, "description", "Med Net"] call acre_api_fnc_setPresetChannelField;
 
 //Add mission specific scripts after here!

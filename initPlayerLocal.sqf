@@ -1,4 +1,4 @@
-player addGoggles "Rev_Shades_Yellow"; //add to every player
+player addGoggles "UK3CB_G_Tactical_Black_Tactical_Gloves_Tan"; //add to every player
 waitUntil {!isNull player};
 
 if (player getVariable ["16AA_Laserdesignator_Backpack", false]) then {
@@ -12,7 +12,7 @@ FW_Acre_Volume_Value = 0.25;
  
 [{ 
     acre_sys_gui_volumeLevel = FW_Acre_Volume_Value; 
-}, [], 1] call CBA_fnc_waitAndExecute;
+}, [], 5] call CBA_fnc_waitAndExecute;
 
 // Set appropriate 16AA Drop Zone Flash for the players
 _group_player = groupId (group player);
@@ -27,7 +27,6 @@ group_hq = ["Coy HQ"];
 group_itc = ["ITC"];
 group_jhc = ["JHC"];
 group_mi = ["MI"];
-group_pf = ["6-0"];
 [player, ""] call BIS_fnc_setUnitInsignia; 
 switch true do
 {
@@ -40,10 +39,25 @@ switch true do
 	case (_group_player in group_jfist): {[player,"16aa_w_gs_jfist_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_hq): {[player,"16aa_w_gs_hq_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_itc): {[player,"16aa_w_gs_itc_dzf"] call BIS_fnc_setUnitInsignia;};
-	case (_group_player in group_jhc): {[player,"16aa_jhc_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_jhc): {[player,"16aa_w_gs_jhc_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_mi): {[player,"16aa_w_gs_mi_dzf"] call BIS_fnc_setUnitInsignia;};
-	case (_group_player in group_pf): {[player,"16aa_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
 	default {[player,"16aa_w_eagle_gsub"] call BIS_fnc_setUnitInsignia;};
+};
+//disable remote sensor on players who do not need to check AI raycasts
+switch true do
+{
+	case (_group_player in group_1pl): {disableRemoteSensors true;};
+	case (_group_player in group_2pl): {disableRemoteSensors true;};
+	case (_group_player in group_3pl): {disableRemoteSensors true;};
+	case (_group_player in group_4pl): {disableRemoteSensors true;};
+	case (_group_player in group_13aasr): {disableRemoteSensors true;};
+	case (_group_player in group_16csmr): {disableRemoteSensors true;};
+	case (_group_player in group_jfist): {disableRemoteSensors true;};
+	case (_group_player in group_hq): {disableRemoteSensors true;};
+	case (_group_player in group_itc): {};
+	case (_group_player in group_jhc): {};
+	case (_group_player in group_mi): {};
+	default {};
 };
 
 //Event Handlers
@@ -141,6 +155,45 @@ _player addMPEventHandler ["MPRespawn", {
 		};
 	};
 }];
+
+params ["_player", "_didJIP"];
+// Settings Branch
+_settingsBranch = ["Settings_Branch", "Radio Settings", "", {}, {true}] call ace_interact_menu_fnc_createAction;
+[(typeOf _player), 1, ["ACE_SelfActions", "ACRE_Interact"], _settingsBranch] call ace_interact_menu_fnc_addActionToClass;
+
+// Show Instructions Action
+_instructionsStatement = {
+    [] execVM "scripts\instructionsRadioSettings.sqf";
+};
+_instructionsAction = ["Instructions_Action", "Instructions", "", _instructionsStatement, {true}] call ace_interact_menu_fnc_createAction;
+[(typeOf _player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch"], _instructionsAction] call ace_interact_menu_fnc_addActionToClass;
+
+// Show Saved Radio Settings Action
+_confirmStatement = {
+    [] execVM "scripts\showRadioSettings.sqf";
+};
+_showRadioSettingsAction = ["Show_Radio_Settings_Action", "Show Saved Radio Settings", "", _confirmStatement, {true}] call ace_interact_menu_fnc_createAction;
+[(typeOf _player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch"], _showRadioSettingsAction] call ace_interact_menu_fnc_addActionToClass;
+
+// Restore Radio Settings branch
+_restoreRadioSettingsBranch = ["Restore_Radio_Settings_Branch", "<t color='#98d7ff'>Restore Radio Settings</t>", "", {}, {true}] call ace_interact_menu_fnc_createAction;
+[(typeOf _player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch"], _restoreRadioSettingsBranch] call ace_interact_menu_fnc_addActionToClass;
+// Confirm Restore action
+_confirmStatement = {
+    [] execVM "scripts\restoreRadioSettings.sqf";
+};
+_confirmAction = ["Confirm_Restore_Radio_Settings", "<t color='#98d7ff'>Confirm</t>", "", _confirmStatement, {true}] call ace_interact_menu_fnc_createAction;
+[(typeOf _player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch", "Restore_Radio_Settings_Branch"], _confirmAction] call ace_interact_menu_fnc_addActionToClass;
+
+// Save Radio Settings branch
+_saveRadioSettingsBranch = ["Save_Radio_Settings_Branch", "<t color='#ffa4a4'>Save Radio Settings</t>", "", {}, {true}] call ace_interact_menu_fnc_createAction;
+[(typeOf _player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch"], _saveRadioSettingsBranch] call ace_interact_menu_fnc_addActionToClass;
+// Confirm Save action
+_confirmStatement = {
+    [] execVM "scripts\saveRadioSettings.sqf";
+};
+_confirmAction = ["Confirm_Save_Radio_Settings", "<t color='#ffa4a4'>Confirm</t>", "", _confirmStatement, {true}] call ace_interact_menu_fnc_createAction;
+[(typeOf _player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch", "Save_Radio_Settings_Branch"], _confirmAction] call ace_interact_menu_fnc_addActionToClass;
 
 //put unconsious players in spectator mode
 ["ace_unconscious", {
