@@ -5,14 +5,15 @@ if (player getVariable ["16AA_Laserdesignator_Backpack", false]) then {
   player addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
 };
 
-// Set speech volume to 0.25
+// Set speech volume to 1/4
 FW_Acre_Volume_Value = 0.25; 
  
-[0.4] call acre_api_fnc_setSelectableVoiceCurve; 
- 
-[{ 
-    acre_sys_gui_volumeLevel = FW_Acre_Volume_Value; 
-}, [], 5] call CBA_fnc_waitAndExecute;
+[{
+  call acre_api_fnc_isInitialized
+  }, {
+    [0.4] call acre_api_fnc_setSelectableVoiceCurve; 
+    acre_sys_gui_volumeLevel = FW_Acre_Volume_Value;
+}, player] call CBA_fnc_waitUntilAndExecute;
 
 // Set appropriate 16AA Drop Zone Flash for the players
 _group_player = groupId (group player);
