@@ -2,7 +2,7 @@
 
 ### This contains all scripts and files necessary for 16AA Missions
 
-last updated 2023_07_15
+last updated 2023_07_24
 
 #### How to use:
 
