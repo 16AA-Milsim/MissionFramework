@@ -91,6 +91,8 @@ KPCF_weapons = [
     "launch_MRAWS_green_rail_F",
     "MAA_MAAWS_HEDP502",    
     "rhs_mag_30Rnd_556x45_M855A1_Stanag",
+    "UK3CB_BAF_L85A3",
+    "UK3CB_BAF_L85A3_UGL",
     "rhs_mag_M441_HE",
     "rhs_mag_m4009",
     "rhs_mag_M583A1_white",
@@ -313,6 +315,7 @@ KPCF_items = [
     "B_UavTerminal",
     "Attachable_Helistretcher",
     "Laserbatteries",
+    "UK3CB_BAF_M6_RangeTable",
     "FISH_Cream_Kit_Europe"
 ];
 
@@ -321,5 +324,6 @@ KPCF_backpacks = [
     "rhsusf_eject_Parachute_backpack",
     "rhs_Tow_Gun_Bag",
     "rhs_TOW_Tripod_Bag",
+    "B_UGV_02_Demining_backpack_F",
     "B_rhsusf_B_BACKPACK"
 ];
