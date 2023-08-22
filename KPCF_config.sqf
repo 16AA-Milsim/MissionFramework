@@ -181,6 +181,7 @@ KPCF_grenades = [
 KPCF_explosives = [
     "rhsusf_m112_mag",
     "rhsusf_m112x4_mag",
+    "SLAMDirectionalMine_Wire_Mag",
     "rhs_mine_M19_mag",                     //AT Mine
     "ClaymoreDirectionalMine_Remote_Mag",   //M18A1 Claymore
     "rhsusf_mine_m49a1_3m_mag",             //Tripwire Flare mine 3m

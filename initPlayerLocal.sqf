@@ -1,4 +1,4 @@
-player addGoggles "UK3CB_G_Tactical_Black_Tactical_Gloves_Tan"; //add to every player
+player addGoggles "UK3CB_G_Tactical_Gloves_Tan"; //add to every player
 waitUntil {!isNull player};
 
 if (player getVariable ["16AA_Laserdesignator_Backpack", false]) then {
