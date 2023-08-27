@@ -24,3 +24,4 @@ group_mi = ["MI"];
 [_group_player] call l6AA_fnc_disableRemoteSensors;
 [_group_player] call l6AA_fnc_setInsignias;
 [_player] call l6AA_fnc_restoreInsigniasOnRespawn;
+call l6AA_fnc_setSpeechVolume;
