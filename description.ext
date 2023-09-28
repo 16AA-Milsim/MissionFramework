@@ -220,9 +220,11 @@ taskManagement_drawDist = 5000;
 #include "taw_vd\GUI.h"
 #include "KPGUI\KPGUI_defines.hpp"
 #include "KPCF\ui\KPCF_dialog.hpp"
+#include "compositions\compositions.cfg"
 
 class CfgFunctions
 {
 	#include "taw_vd\cfgfunctions.hpp"
   	#include "KPCF\KPCF_functions.hpp"
+    #include "LARs\spawnComp\functions\functions.cpp"
 };

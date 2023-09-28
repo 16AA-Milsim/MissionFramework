@@ -194,3 +194,27 @@ _confirmStatement = {
 };
 _confirmAction = ["Confirm_Save_Radio_Settings", "<t color='#ffa4a4'>Confirm</t>", "", _confirmStatement, {true}] call ace_interact_menu_fnc_createAction;
 [(typeOf _player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch", "Save_Radio_Settings_Branch"], _confirmAction] call ace_interact_menu_fnc_addActionToClass;
+
+private _action = ["DeployMedTent", "Deploy Medical Tent", "", {["CBPS", _target getPos [-4.60, getDir _target], [0,0,0.15], getDir _target] call LARs_fnc_spawnComp;}, {true}] call ace_interact_menu_fnc_createAction;
+["rhsusf_M1085A1P2_B_Medical_fmtv_usarmy", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+private _action = ["PackMedTent", "Pack Medical Tent", "", {[ "CBPS_0" ] call LARs_fnc_deleteComp;}, {true}] call ace_interact_menu_fnc_createAction;
+["rhsusf_M1085A1P2_B_Medical_fmtv_usarmy", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+private _action = ["DeployTent1", "Deploy Medical Tent", "", {[ "MedTent", _target getPos [ -7, getDir _target ], [0,0,0.15], getDir _target ] call LARs_fnc_spawnComp;}, {true}] call ace_interact_menu_fnc_createAction;
+["afuk_atmp_medical_desert", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+private _action = ["PackTent1", "Pack Medical Tent", "", {[ "MedTent_0" ] call LARs_fnc_deleteComp;}, {true}] call ace_interact_menu_fnc_createAction;
+["afuk_atmp_medical_desert", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+private _action = ["DeployTent2", "Deploy Medical Tent", "", {[ "MedTent", _target getPos [ -7, getDir _target ], [0,0,0.15], getDir _target ] call LARs_fnc_spawnComp;}, {true}] call ace_interact_menu_fnc_createAction;
+["afuk_atmp_medical_Woodland", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+private _action = ["PackTent2", "Pack Medical Tent", "", {[ "MedTent_0" ] call LARs_fnc_deleteComp;}, {true}] call ace_interact_menu_fnc_createAction;
+["afuk_atmp_medical_Woodland", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+private _action = ["DeployTent3", "Deploy Medical Tent", "", {[ "MedTent", _target getPos [ -9, getDir _target ], [0,0,0.15], getDir _target ] call LARs_fnc_spawnComp;}, {true}] call ace_interact_menu_fnc_createAction;
+["UK3CB_BAF_LandRover_Amb_Base", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+private _action = ["PackTent3", "Pack Medical Tent", "", {[ "MedTent_0" ] call LARs_fnc_deleteComp;}, {true}] call ace_interact_menu_fnc_createAction;
+["UK3CB_BAF_LandRover_Amb_Base", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
