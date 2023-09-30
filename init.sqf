@@ -55,4 +55,14 @@ player addrating 90000;
 ["ACRE_PRC117F", "default", 11, "description", "P Plt Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 12, "description", "Med Net"] call acre_api_fnc_setPresetChannelField;
 
+["CAManBase", "InitPost", {
+    params ["_entity"];
+    if (isPlayer _entity) exitWith {};
+    if (secondaryWeapon _entity == "") exitWith{}; 
+    {_entity removeMagazines _x} forEach (magazines _entity arrayIntersect compatibleMagazines primaryWeapon _entity); 
+    {_entity removeMagazines _x} forEach (magazines _entity arrayIntersect compatibleMagazines handgunWeapon _entity); 
+    _entity removeWeapon primaryWeapon _entity; 
+    _entity removeWeapon handgunWeapon _entity;
+}, true, [], true] call CBA_fnc_addClassEventHandler;
+
 //Add mission specific scripts after here!
