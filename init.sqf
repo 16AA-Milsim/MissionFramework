@@ -55,4 +55,15 @@ player addrating 90000;
 ["ACRE_PRC117F", "default", 11, "description", "P Plt Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 12, "description", "Med Net"] call acre_api_fnc_setPresetChannelField;
 
+["CAManBase", "Reloaded", {
+    params ["_unit", "_weapon", "_muzzle", "_newMagazine", "_oldMagazine"];
+    if (isPlayer _unit) exitWith {};
+    _oldMagazine params ["", ["_roundsLeftold", -1, [0]]];
+    _newMagazine params ["_type", ""];
+    if (_roundsLeftold > 0) exitWith {};
+    (_type call BIS_fnc_ItemType) params ["_magType", "_magLoadedWith"];
+    if (_magType != "Magazine" || {!(_magLoadedWith in ["Bullet","Grenade","Rocket", "ShotgunShell","SmokeShell"])}) exitWith {};
+    _unit addMagazine _type;
+}, true, [], true] call CBA_fnc_addClassEventHandler;
+
 //Add mission specific scripts after here!
