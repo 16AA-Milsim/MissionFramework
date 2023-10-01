@@ -60,9 +60,10 @@ player addrating 90000;
     if (isPlayer _entity) exitWith {};
     if (secondaryWeapon _entity == "") exitWith{}; 
     {_entity removeMagazines _x} forEach (magazines _entity arrayIntersect compatibleMagazines primaryWeapon _entity); 
-    {_entity removeMagazines _x} forEach (magazines _entity arrayIntersect compatibleMagazines handgunWeapon _entity); 
-    _entity removeWeapon primaryWeapon _entity; 
-    _entity removeWeapon handgunWeapon _entity;
+    _entity removeWeapon primaryWeapon _entity;
+    if (handgunWeapon _entity == "") then {
+        _entity addMagazine "rhs_18rnd_9x21mm_7N28";
+        _entity addWeapon "rhs_weap_6p53";};
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 //Add mission specific scripts after here!
