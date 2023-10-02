@@ -22,6 +22,7 @@ group_3pl = ["3 Plt HQ","3-1","3-2"];
 group_4pl = ["4 Plt HQ", "4-1"];
 group_13aasr = ["4-3"];
 group_16csmr = ["4-4"];
+group_216ps = ["216"];
 group_jfist = ["7-0"];
 group_hq = ["Coy HQ"];
 group_itc = ["ITC"];
@@ -36,6 +37,7 @@ switch true do
 	case (_group_player in group_4pl): {[player,"16aa_w_gs_4pl_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_13aasr): {[player,"16aa_w_gs_13aasr_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_16csmr): {[player,"16aa_w_gs_16csmr_dzf"] call BIS_fnc_setUnitInsignia;};
+	case (_group_player in group_216ps): {[player,"16aa_w_gs_216ps_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_jfist): {[player,"16aa_w_gs_jfist_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_hq): {[player,"16aa_w_gs_hq_dzf"] call BIS_fnc_setUnitInsignia;};
 	case (_group_player in group_itc): {[player,"16aa_w_gs_itc_dzf"] call BIS_fnc_setUnitInsignia;};
@@ -52,6 +54,7 @@ switch true do
 	case (_group_player in group_4pl): {disableRemoteSensors true;};
 	case (_group_player in group_13aasr): {disableRemoteSensors true;};
 	case (_group_player in group_16csmr): {disableRemoteSensors true;};
+	case (_group_player in group_216ps): {disableRemoteSensors true;};
 	case (_group_player in group_jfist): {disableRemoteSensors true;};
 	case (_group_player in group_hq): {disableRemoteSensors true;};
 	case (_group_player in group_itc): {};
