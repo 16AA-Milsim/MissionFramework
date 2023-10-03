@@ -57,6 +57,7 @@ player addrating 90000;
 
 ["CAManBase", "InitPost", {
     params ["_entity"];
+    if (!local _entity) exitWith {};
     if (isPlayer _entity) exitWith {};
     if (secondaryWeapon _entity == "") exitWith{}; 
     {_entity removeMagazines _x} forEach (magazines _entity arrayIntersect compatibleMagazines primaryWeapon _entity); 
