@@ -5,6 +5,15 @@ if (player getVariable ["16AA_Laserdesignator_Backpack", false]) then {
   player addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
 };
 
+if (player getVariable ["16AA_AirCommandChannel", false]) then {
+	l6AA_AirCommandChannelID radioChannelAdd [player];
+	[{setCurrentChannel (l6AA_AirCommandChannelID + 5);},nil,3] call CBA_fnc_waitAndExecute;
+	addMissionEventHandler ["MapSingleClick", {
+		params ["_units", "_pos", "_alt", "_shift"];
+		setCurrentChannel (l6AA_AirCommandChannelID + 5);
+	}];
+};
+
 // Set speech volume to 1/4
 [
 	{call acre_api_fnc_isInitialized},
@@ -197,3 +206,12 @@ _confirmStatement = {
 };
 _confirmAction = ["Confirm_Save_Radio_Settings", "<t color='#ffa4a4'>Confirm</t>", "", _confirmStatement, {true}] call ace_interact_menu_fnc_createAction;
 [(typeOf _player), 1, ["ACE_SelfActions", "ACRE_Interact", "Settings_Branch", "Save_Radio_Settings_Branch"], _confirmAction] call ace_interact_menu_fnc_addActionToClass;
+
+//restore access to AirCommand Channel
+_player addMPEventHandler ["MPRespawn", {
+	params ["_unit", "_corpse"];
+	if (player getVariable ["16AA_AirCommandChannel", false]) then {
+		l6AA_AirCommandChannelID radioChannelAdd [player];
+		setCurrentChannel (l6AA_AirCommandChannelID + 5);
+	};
+}];
