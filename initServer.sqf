@@ -6,3 +6,6 @@
         "Vehicle ZHC blacklisted!" remoteExec ["systemChat", _entity];
     };
 }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+l6AA_AirCommandChannelID = radioChannelCreate [[0.3, 0.3, 0.5, 1], "Air Command", "%UNIT_NAME", [], true];
+publicVariable "l6AA_AirCommandChannelID";
