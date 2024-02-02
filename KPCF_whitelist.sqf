@@ -13,12 +13,12 @@ KPCF_enable_whitelist = true; //set to "true" if you want to limit Cratefiller o
 //Whitelist based on Steam64ID, can be obtained here: https://steamid.io/
 KP_cratefiller_whitelist_steam_id = [
     "76561198059979416",     //Scarle
-    "76561197966186458",     //MacDonald
-    "76561198269174036",     //Predo
-    "76561198013396016",     //Bedford
     "76561198020770680",     //Pettersson
     "76561198013743881",     //Clayton
-    "76561198042251903"      //Mueller
+    "76561198042251903",     //Mueller
+    "76561197990788825",     //Willis
+    "76561198138198693",     //Li
+    "76561198037625563"      //McMullen
 ];
 
 //Whitelist based on player name
@@ -27,8 +27,7 @@ KP_cratefiller_whitelist_player_name = [
 
 //Whitelist based on player group/squad name (the one you see in the editor, NOT the one you see in role selection)
 KP_cratefiller_whitelist_group_name = [
-    "4-1",
-    "4-3",
     "4-4",
-    "4 Plt HQ"
-];
+    "JHC",
+    "7-0"
+    ];
