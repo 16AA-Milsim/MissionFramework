@@ -329,6 +329,7 @@ KPCF_items = [
     "Laserbatteries",
     "UK3CB_BAF_M6_RangeTable",
     "FISH_Cream_Kit_Europe"
+    "42cdo_vs17_item"
 ];
 
 // Defines the available backpacks
