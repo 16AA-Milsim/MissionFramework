@@ -1,3 +1,4 @@
+params ["_player", "_didJIP"];
 player addGoggles "rhs_googles_black"; //add to every player
 waitUntil {!isNull player};
 
