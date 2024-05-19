@@ -266,6 +266,7 @@ KPCF_items = [
     "kat_AFAK"
     "kat_IFAK"
     "kat_MFAK"
+    "kat_suction"
     //ACE Items
     "UK3CB_BAF_L16_RangeTable",
     "ACE_ATragMX",
