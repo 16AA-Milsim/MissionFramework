@@ -263,6 +263,9 @@ KPCF_items = [
     "kat_oxygenTank_150_Item",
     "kat_oxygenTank_300_Item",
     "kat_crossPanel",
+    "kat_AFAK"
+    "kat_IFAK"
+    "kat_MFAK"
     //ACE Items
     "UK3CB_BAF_L16_RangeTable",
     "ACE_ATragMX",
