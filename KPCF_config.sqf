@@ -267,6 +267,8 @@ KPCF_items = [
     "kat_IFAK",
     "kat_MFAK",
     "kat_suction",
+    "kat_coag_sense",
+    "kat_phenylephrineAuto",
     //ACE Items
     "UK3CB_BAF_L16_RangeTable",
     "ACE_ATragMX",
