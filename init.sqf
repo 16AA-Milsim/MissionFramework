@@ -40,28 +40,4 @@ player addrating 90000;
 ["ACRE_PRC117F", "default", 10, "description", "Batt Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 11, "description", "CAS Net"] call acre_api_fnc_setPresetChannelField;
 
-["CAManBase", "InitPost", {
-    params ["_entity"];
-    if (!local _entity) exitWith {};
-    if (isPlayer _entity) exitWith {};
-    if (secondaryWeapon _entity == "") exitWith{}; 
-    {_entity removeMagazines _x} forEach (magazines _entity arrayIntersect compatibleMagazines primaryWeapon _entity); 
-    _entity removeWeapon primaryWeapon _entity;
-    if (handgunWeapon _entity == "") then {
-        _entity addMagazine "rhs_mag_9x19mm_7n21_44";
-        _entity addWeapon "rhs_weap_pp2000_folded";};
-        _entity addMagazines ["rhs_mag_9x19mm_7n21_44", 2];
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-
-["CAManBase", "Reloaded", { 
-    params ["_unit", "_weapon", "_muzzle", "_newMagazine", "_oldMagazine"]; 
-    if (isPlayer _unit) exitWith {}; 
-    _oldMagazine params ["", ["_roundsLeftold", -1, [0]]]; 
-    _newMagazine params ["_type", ""]; 
-    if (_roundsLeftold > 0) exitWith {}; 
-    (_type call BIS_fnc_ItemType) params ["_magType", "_magLoadedWith"]; 
-    if (_magType != "Magazine" || {!(_magLoadedWith in ["Artillery","Bullet","Grenade","Missile","Rocket", "ShotgunShell","SmokeShell"])}) exitWith {}; 
-    _unit addMagazine _type; 
-}, true, [], true] call CBA_fnc_addClassEventHandler;
-
 //Add mission specific scripts after here!
