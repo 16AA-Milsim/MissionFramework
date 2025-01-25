@@ -49,6 +49,17 @@ KPCF_crates = [
     "ACE_medicalSupplyCrate_advanced"
 ];
 
+// Spawn crates and don't remove their inventory, they still need to be listed in KPCF_crates!
+KPCF_crates_keep_inventory = [
+    "tbd_mortars_105mm_box_dpicm",
+    "tbd_mortars_105mm_box",
+    "tbd_mortars_105mm_box_laser",
+    "tbd_mortars_105mm_box_smoke",
+    "tbd_mortar_81mm_box_he",
+    "tbd_mortar_81mm_box_illum",
+    "tbd_mortar_81mm_box_smoke"
+];
+
 
 // Defines the blacklisted items
 // Blacklisted items are used on every category with activated generatedLists and everytime on the magazines and attachments
