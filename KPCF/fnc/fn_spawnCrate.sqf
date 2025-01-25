@@ -63,7 +63,7 @@ if (KPCF_ace && KPCF_ace_carry_all && (_crate isKindOf "ThingX")) then {
 };
 
 // Clear the storage
-if (!_crate in KPCF_crates_keep_inventory) then {
+if (!(_crate in KPCF_crates_keep_inventory)) then {
     clearWeaponCargoGlobal _crate;
     clearMagazineCargoGlobal _crate;
     clearItemCargoGlobal _crate;
