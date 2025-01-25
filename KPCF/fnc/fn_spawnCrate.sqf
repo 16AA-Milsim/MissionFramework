@@ -63,10 +63,12 @@ if (KPCF_ace && KPCF_ace_carry_all && (_crate isKindOf "ThingX")) then {
 };
 
 // Clear the storage
-clearWeaponCargoGlobal _crate;
-clearMagazineCargoGlobal _crate;
-clearItemCargoGlobal _crate;
-clearBackpackCargoGlobal _crate;
+if (!_crate in KPCF_crates_keep_inventory) then {
+    clearWeaponCargoGlobal _crate;
+    clearMagazineCargoGlobal _crate;
+    clearItemCargoGlobal _crate;
+    clearBackpackCargoGlobal _crate;
+};
 
 private _config = [_crateType] call KPCF_fnc_getConfigPath;
 private _name = (getText (configFile >> _config >> _crateType >> "displayName"));
