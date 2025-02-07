@@ -27,6 +27,7 @@ KP_cratefiller_whitelist_player_name = [
 
 //Whitelist based on player group/squad name (the one you see in the editor, NOT the one you see in role selection)
 KP_cratefiller_whitelist_group_name = [
+    "4-3",
     "4-4",
     "JHC",
     "7-0"
