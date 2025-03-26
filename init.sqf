@@ -18,26 +18,23 @@ player addrating 90000;
 
 //ACRE Channel Setup
 ["ACRE_PRC152", "default", 1, "description", "1 Plt Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC152", "default", 2, "description", "2 Plt Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC152", "default", 3, "description", "3 Plt Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC152", "default", 4, "description", "FST Req Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC152", "default", 5, "description", "Coy Net"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 2, "description", "4 Plt Net"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 3, "description", "Coy Net"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 4, "description", "Logistics"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 5, "description", "FAC Req Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 6, "description", "Fires Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 7, "description", "Air to Air"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 8, "description", "Air to Ground"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC152", "default", 9, "description", "Med Net"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC152", "default", 9, "description", "CAS Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC152", "default", 10, "description", "Batt Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC152", "default", 11, "description", "CAS Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 1, "description", "1 Plt Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC117F", "default", 2, "description", "2 Plt Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC117F", "default", 3, "description", "3 Plt Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC117F", "default", 4, "description", "FST Req Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC117F", "default", 5, "description", "Coy Net"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC117F", "default", 2, "description", "4 Plt Net"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC117F", "default", 3, "description", "Coy Net"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC117F", "default", 4, "description", "Logistics"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC117F", "default", 5, "description", "FAC Req Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 6, "description", "Fires Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 7, "description", "Air to Air"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 8, "description", "Air to Ground"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC117F", "default", 9, "description", "Med Net"] call acre_api_fnc_setPresetChannelField;
+["ACRE_PRC117F", "default", 9, "description", "CAS Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 10, "description", "Batt Net"] call acre_api_fnc_setPresetChannelField;
-["ACRE_PRC117F", "default", 11, "description", "CAS Net"] call acre_api_fnc_setPresetChannelField;
-
 //Add mission specific scripts after here!
