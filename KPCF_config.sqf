@@ -98,7 +98,7 @@ KPCF_weapons = [
     "launch_MRAWS_green_rail_F",
     "MAA_MAAWS_HEDP502",    
     "rhs_mag_30Rnd_556x45_M855A1_Stanag",
-    "rhsusf_20Rnd_762x51_SR25_m993_Mag",
+    "ACE_20Rnd_762x51_M993_AP_Mag",
     "UK3CB_BAF_L85A3",
     "UK3CB_BAF_L85A3_UGL",
     "rhs_mag_M441_HE",
@@ -335,6 +335,7 @@ KPCF_items = [
     //CTABs
     "ItemAndroid",
     "ItemcTab",
+    "B_UavTerminal",
     "itc_land_tablet_fdc",
     //Weapon Attachments
     "uk3cb_baf_ta648",
@@ -375,6 +376,7 @@ KPCF_backpacks = [
     "rhsusf_eject_Parachute_backpack",
     "rhs_Tow_Gun_Bag",
     "rhs_TOW_Tripod_Bag",
+    "B_UAV_06_backpack_F",
     "B_UGV_02_Demining_backpack_F",
     "B_rhsusf_B_BACKPACK"
 ];

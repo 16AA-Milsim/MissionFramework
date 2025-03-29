@@ -17,9 +17,8 @@ KP_cratefiller_whitelist_steam_id = [
     "76561198013743881",     //Clayton
     "76561198042251903",     //Mueller
     "76561197990788825",     //Willis
-    "76561198006649815",     //Fred
     "76561198138198693",     //Li
-    "76561198041378714"      //Williams
+    "76561198037625563"      //McMullen
 ];
 
 //Whitelist based on player name
@@ -29,9 +28,7 @@ KP_cratefiller_whitelist_player_name = [
 //Whitelist based on player group/squad name (the one you see in the editor, NOT the one you see in role selection)
 KP_cratefiller_whitelist_group_name = [
     "4-4",
+    "4-3",
     "JHC",
-    "Coy HQ",
-    "7-0",
-    "13AASR",
-    "4-3"
+    "7-0"
     ];

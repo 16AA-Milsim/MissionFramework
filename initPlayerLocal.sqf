@@ -28,7 +28,3 @@ _player addMPEventHandler ["MPRespawn", {
 		setCurrentChannel (l6AA_AirCommandChannelID + 5);
 	};
 }];
-[{
-    [] call l6AA_dzf_fnc_setUnitInsignia;
-}, nil, 50] call CBA_fnc_waitAndExecute;
-
