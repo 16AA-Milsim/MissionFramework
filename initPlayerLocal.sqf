@@ -21,7 +21,7 @@ if ((roleDescription player) != "Recruit") then {
 private _speedloaderAllowedGroups = [
 	"1 Plt HQ", "1-1", "1-2", "1-3",
 	"4 Plt HQ", "4-1", "4-3", "4-4",
-	"Coy HQ"
+	"7RHA", "Coy HQ"
 ];
 
 // Add Greenmag Speedloader if missing from inventory and in allowed group
