@@ -37,4 +37,10 @@ player addrating 90000;
 ["ACRE_PRC117F", "default", 8, "description", "Air to Ground"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 9, "description", "CAS Net"] call acre_api_fnc_setPresetChannelField;
 ["ACRE_PRC117F", "default", 10, "description", "Batt Net"] call acre_api_fnc_setPresetChannelField;
+
+//Stop onscreen AI chat
+{_x setVariable ["BIS_noCoreConversations", true]} forEach allUnits;
+0 fadeRadio 0;
+enableSentences false;
+
 //Add mission specific scripts after here!
