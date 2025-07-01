@@ -29,12 +29,18 @@ if ((groupId (group player) in _speedloaderAllowedGroups) && !("greenmag_item_sp
 	player addItem "greenmag_item_speedloader";
 };
 
-if (player getVariable ["16AA_Laserdesignator_Backpack", false]) then {
-	player addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
+if (
+    player getVariable ["16AA_Laserdesignator_Backpack", false] &&
+    !("UK3CB_BAF_Soflam_Laserdesignator" in (items player + backpackItems player + assignedItems player))
+) then {
+    player addItemToBackpack "UK3CB_BAF_Soflam_Laserdesignator";
 };
 
-if (player getVariable ["16AA_UAV_Backpack", false]) then {
-	player addItemToBackpack "B_UavTerminal";
+if (
+    player getVariable ["16AA_UAV_Backpack", false] &&
+    !("16AA_UAV_Backpack" in (items player + backpackItems player + assignedItems player))
+) then {
+    player addItemToBackpack "16AA_UAV_Backpack";
 };
 
 // Set the Greenmag skill coefficient for the local player.
