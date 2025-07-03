@@ -2,10 +2,11 @@
     Killah Potatoes Cratefiller v1.1.0
 
     Author: Dubjunk - https://github.com/KillahPotatoes
-    Edited by:
+     Edited by:
         Mildly_Interested - https://github.com/MildlyInterested
         Darojax - https://github.com/Darojax
         Blue - https://github.com/BlueTheKing
+        Scarle
     
     License: GNU General Public License v3.0 - https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,9 +17,9 @@
 //For WHITELISTING settings check the "KPCF_whitelist.sqf" file
 
 //Configure ACE specific settings, these settings won't affect any other crates or objects in your mission, only objects spawned by KP Cratefiller
-KPCF_ace_drag_all = true;       //if you want to be able to ACE DRAG every crate (created by Cratefiller) regardless of weight set to "true"
-KPCF_ace_carry_all = true;      //if you want to be able to ACE CARRY every crate (created by Cratefiller) regardless of weight set to "true"
-KPCF_ace_cargo_one = true;      //sets required cargo space to 1 for every crate (created by Cratefiller) if set to "true"
+KPCF_ace_drag_all = true;      //if you want to be able to ACE DRAG every crate (created by Cratefiller) regardless of weight set to "true"
+KPCF_ace_carry_all = true;     //if you want to be able to ACE CARRY every crate (created by Cratefiller) regardless of weight set to "true"
+KPCF_ace_cargo_one = true;     //sets required cargo space to 1 for every crate (created by Cratefiller) if set to "true"
 
 // The Base object is for the player interaction, so at these object you can open the dialog
 KPCF_cratefillerBase = [
@@ -47,15 +48,6 @@ KPCF_crates = [
     "LSR_Crates_pelican_Empty_S",
     "LSR_Crates_pelican_Empty_M",
     "LSR_Crates_pelican_Empty_L",
-    "LSR_Crates_pelican_pallet_L",
-    "LSR_Crates_pelican_pallet_M",
-    "tbd_mortars_105mm_box_dpicm",
-    "tbd_mortars_105mm_box",
-    "tbd_mortars_105mm_box_laser",
-    "tbd_mortars_105mm_box_smoke",
-    "tbd_mortar_81mm_box_he",
-    "tbd_mortar_81mm_box_illum",
-    "tbd_mortar_81mm_box_smoke",
     "ACE_medicalSupplyCrate_advanced"
 ];
 
@@ -94,79 +86,14 @@ KPCF_whitelistedItems = [
 
 // Defines the available weapons
 KPCF_weapons = [
-    "ACE_20Rnd_762x51_M993_AP_Mag",
-    "ACE_40mm_Flare_ir",
-    "Starstreak",
-    "Starstreak2_missile",
-    "launch_MRAWS_green_F",
-    "launch_NLAW_F",
-    // UK3CB
-    "UK3CB_BAF_556_200Rnd",
-    "UK3CB_BAF_L85A3",
-    "UK3CB_BAF_L85A3_UGL",
-    "UK3CB_BAF_762_100Rnd",
-    "UK3CB_BAF_32Rnd_40mm_G_Box",
-    "UK3CB_BAF_L129A1",
-    "UK3CB_BAF_L110_762",
-    "UK3CB_BAF_M6",
-    "UK3CB_BAF_1Rnd_60mm_Mo_AB_Shells",
-    "UK3CB_BAF_1Rnd_60mm_Mo_Shells",
-    "UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",
-    "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_Red",
-    "UK3CB_BAF_1Rnd_60mm_Mo_WPSmoke_White",
-    "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",
-    "UK3CB_BAF_NLAW_Launcher",
-    "UK3CB_BAF_L111A1",
-    "UK3CB_BAF_127_100Rnd",
-    "UK3CB_BAF_L134A1",
-    "UK3CB_BAF_Tripod",
-    "UK3CB_BAF_SmokeShellOrange",
-    // ace_compat
-    "ace_compat_rhs_usf3_mag_TOW2b",
-    "ace_compat_rhs_usf3_mag_TOW2bb",
-    // GreenMag
-    "greenmag_ammo_556x45_basic_30Rnd",
-    "greenmag_ammo_556x45_basic_60Rnd",
-    "greenmag_ammo_762x51_basic_30Rnd",
-    "greenmag_ammo_762x51_basic_60Rnd",
-    "greenmag_beltlinked_762x51_basic_100",
-    "greenmag_ammo_300_basic_30Rnd",
-    "greenmag_ammo_300_basic_60Rnd",
-    "greenmag_ammo_9x19_basic_30Rnd",
-    "greenmag_ammo_9x19_basic_60Rnd",
-    "greenmag_ammo_50BMG_basic_30Rnd",
-    "greenmag_ammo_50BMG_basic_60Rnd",
-    // 3LSR
-    "lsr_wepn_l7a2_stnd",
-    "lsr_wepn_l7a2_rapid",
-    "lsr_wepn_l7a2_lowrf",
-    "lsr_wepn_l115a4_od",
-    "lsr_wepn_l115a4_od_ghillie",
-    "lsr_wepn_l115a4_dd",
-    "lsr_wepn_l115a4_dd_ghillie",
-    "lsr_wepn_l115a4_bb",
-    "lsr_wepn_l115a4_bb_ghillie",
-    "lsr_lnch_javelin",
-    "lsr_static_javelin_low",
-    "lsr_static_l111a1_low",
-    "lsr_static_gpmg_low",
-    "lsr_static_l134a1_low",
-    "lsr_mag_l115a4_338AP",
-    "lsr_mag_l115a4_338AP_T",
-    "lsr_mag_l115a4_338SP",
-    "lsr_mag_l115a4_338SP_T",
-    "lsr_mag_box_762_200rnd",
-    "lsr_mag_box_762_200rnd_tr",
-    "lsr_mag_fgm148_tube",
-    // RHS
+   //RHS
     "rhs_weap_M107_d",
     "rhsusf_mag_10Rnd_STD_50BMG_mk211",
     "rhsusf_mag_10Rnd_STD_50BMG_M33",
-    "rhs_mag_30Rnd_556x45_M855A1_Stanag",
-    "rhsusf_mag_17Rnd_9x19_FMJ",
     "rhs_mag_M441_HE",
     "rhs_mag_m4009",
     "rhs_mag_M583A1_white",
+    "rhs_mag_30Rnd_556x45_M855A1_Stanag",
     "rhs_mag_M585_white_cluster",
     "rhs_mag_m661_green",
     "rhs_mag_m662_red",
@@ -177,13 +104,73 @@ KPCF_weapons = [
     "rhs_mag_m715_Green",
     "rhs_mag_m716_yellow",
     "rhs_mag_M781_Practice",
+    "rhsusf_mag_17Rnd_9x19_FMJ",
     "rhs_M252_Gun_Bag",
     "rhs_M252_Bipod_Bag",
     "rhs_weap_fim92",
     "rhs_fim92_mag",
     "rhs_fgm148_magazine_AT",
     "rhs_mag_maaws_HEAT",
-    // TBD
+   //UK3CB
+    "UK3CB_BAF_L85A3",
+    "UK3CB_BAF_556_200Rnd",
+    "UK3CB_BAF_L85A3_UGL",
+    "UK3CB_BAF_L110_762",
+    "UK3CB_BAF_M6",
+    "UK3CB_BAF_1Rnd_60mm_Mo_AB_Shells",
+    "UK3CB_BAF_1Rnd_60mm_Mo_Shells",
+    "UK3CB_BAF_1Rnd_60mm_Mo_Flare_White",
+    "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_Red",
+    "UK3CB_BAF_1Rnd_60mm_Mo_WPSmoke_White",
+    "UK3CB_BAF_1Rnd_60mm_Mo_Smoke_White",
+    "UK3CB_BAF_762_100Rnd",
+    "UK3CB_BAF_32Rnd_40mm_G_Box",
+    "UK3CB_BAF_L129A1",
+    "UK3CB_BAF_L111A1",
+    "UK3CB_BAF_127_100Rnd",
+    "UK3CB_BAF_L134A1",
+    "UK3CB_BAF_Tripod",
+    "UK3CB_BAF_SmokeShellOrange",
+   //3LSR
+    "lsr_wepn_l7a2_stnd",
+    "lsr_wepn_l7a2_rapid",
+    "lsr_wepn_l7a2_lowrf",
+    "lsr_wepn_l115a4_od",
+    "lsr_wepn_l115a4_od_ghillie",
+    "lsr_wepn_l115a4_dd",
+    "lsr_wepn_l115a4_dd_ghillie",
+    "lsr_wepn_l115a4_bb",
+    "lsr_wepn_l115a4_bb_ghillie",
+    "lsr_lnch_javelin",
+    "lsr_mag_box_762_200rnd",
+    "lsr_mag_box_762_200rnd_tr",
+    "lsr_static_javelin_low",
+    "lsr_static_l111a1_low",
+    "lsr_static_gpmg_low",
+    "lsr_static_l134a1_low",
+    "lsr_mag_l115a4_338AP",
+    "lsr_mag_l115a4_338AP_T",
+    "lsr_mag_l115a4_338SP",
+    "lsr_mag_l115a4_338SP_T",
+    "lsr_mag_fgm148_tube",
+   //ACE
+    "ace_20rnd_762x51_m993_ap_mag",
+    "ACE_40mm_Flare_ir",
+    "ace_compat_rhs_usf3_mag_TOW2b",
+    "ace_compat_rhs_usf3_mag_TOW2bb",
+   //GreenMag
+    "greenmag_ammo_556x45_basic_30Rnd",
+    "greenmag_ammo_556x45_basic_60Rnd",
+    "greenmag_ammo_762x51_basic_30Rnd",
+    "greenmag_ammo_762x51_basic_60Rnd",
+    "greenmag_beltlinked_762x51_basic_100",
+    "greenmag_ammo_300_basic_30Rnd",
+    "greenmag_ammo_300_basic_60Rnd",
+    "greenmag_ammo_9x19_basic_30Rnd",
+    "greenmag_ammo_9x19_basic_60Rnd",
+    "greenmag_ammo_50BMG_basic_30Rnd",
+    "greenmag_ammo_50BMG_basic_60Rnd",    
+   //TBD
     "tbd_mortar_81mm_shell_he",
     "tbd_mortar_81mm_shell_illum",
     "tbd_mortar_81mm_shell_smoke",
@@ -202,14 +189,19 @@ KPCF_weapons = [
     "tbd_mortars_105mm_tube_laser",
     "tbd_mortars_105mm_shell_smoke",
     "tbd_mortars_105mm_tube_smoke",
-    // Enhanced MAAWS
+   //MAAWS
     "za_enhancedmaaws_mag_m4_ASM509",
-    "za_enhancedmaaws_mag_m4_HE",
+    "za_enhancedmaaws_mag_m4_HE",    
     "za_enhancedmaaws_mag_m4_HEAT551",
     "za_enhancedmaaws_mag_m4_HEAT",
     "za_enhancedmaaws_mag_m4_HEDP",
     "za_enhancedmaaws_mag_m4_ILLUM",
-    "za_enhancedmaaws_mag_m4_MT756"
+    "za_enhancedmaaws_mag_m4_MT756",
+   //BASE 
+    "launch_MRAWS_green_F",
+    "Starstreak",
+    "launch_NLAW_F",
+    "Starstreak2_missile"
 ];
 
 // Defines the available grenades
@@ -243,8 +235,8 @@ KPCF_explosives = [
     "rhsusf_m112_mag",
     "rhsusf_m112x4_mag",
     "SLAMDirectionalMine_Wire_Mag",
-    "rhs_mine_M19_mag",             //AT Mine
-    "ClaymoreDirectionalMine_Remote_Mag",    //M18A1 Claymore
+    "rhs_mine_M19_mag",                     //AT Mine
+    "ClaymoreDirectionalMine_Remote_Mag",   //M18A1 Claymore
     "rhsusf_mine_m49a1_3m_mag",             //Tripwire Flare mine 3m
     "rhsusf_mine_m49a1_6m_mag",             //Tripwire Flare mine 6m
     "rhsusf_mine_m49a1_10m_mag"             //Tripwire Flare mine 10m
@@ -275,7 +267,9 @@ KPCF_items = [
     "ACE_surgicalKit",
     "ACE_tourniquet",
     "ACE_suture",
-     //ACM
+    "ACE_Humanitarian_Ration",
+    "ACE_WaterBottle",
+    //ACM
     "ACM_IV_14g",
     "ACM_IV_16g",
     "ACM_ACCUVAC",
@@ -334,8 +328,8 @@ KPCF_items = [
     "ACE_Fortify",
     "ACE_Kestrel4500",
     "ACE_Flashlight_KSF1",
-    "ACE_M26_Clacker",        //M152 Firing Device
-    "ACE_Clacker",            //M57 Firing Device
+    "ACE_M26_Clacker",      //M152 Firing Device
+    "ACE_Clacker",          //M57 Firing Device
     "ACE_MapTools",
     "ACE_microDAGR",
     "ACE_RangeCard",
@@ -350,9 +344,7 @@ KPCF_items = [
     "ACE_Vector",
     "ACE_wirecutter",
     "ACE_VMM3",
-    "ACE_Humanitarian_Ration",
     "ACE_Sunflower_Seeds",
-    "ACE_WaterBottle",
     "ace_marker_flags_black",
     "ace_marker_flags_blue",
     "ace_marker_flags_green",
@@ -367,9 +359,10 @@ KPCF_items = [
     //CTABs
     "ItemAndroid",
     "ItemcTab",
-    "itc_land_tablet_fdc",
+    "B_UavTerminal",
     "ITC_Land_B_UAV_Packed",
     "ITC_Land_B_AR2i_Packed",
+    "itc_land_tablet_fdc",
     //Weapon Attachments
     "uk3cb_baf_ta648",
     "uk3cb_baf_llm_ir_black",
@@ -390,7 +383,6 @@ KPCF_items = [
     //Misc Items
     "V_EOD_olive_F",
     "ToolKit",
-    "B_UavTerminal",
     "Attachable_Helistretcher",
     "Laserbatteries",
     "UK3CB_BAF_M6_RangeTable",
