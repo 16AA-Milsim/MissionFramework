@@ -48,7 +48,14 @@ KPCF_crates = [
     "LSR_Crates_pelican_Empty_S",
     "LSR_Crates_pelican_Empty_M",
     "LSR_Crates_pelican_Empty_L",
-    "ACE_medicalSupplyCrate_advanced"
+    "ACE_medicalSupplyCrate_advanced",
+    "L118_Pallet_L31A3",
+    "L118_Pallet_L35A3",
+    "L118_Pallet_L36",
+    "L118_Pallet_L37A2",
+    "L118_Pallet_L38A2",
+    "L118_Pallet_L43A2",
+    "L118_FuseCrate_L33A2"
 ];
 
 
