@@ -149,8 +149,6 @@ KPCF_weapons = [
     "lsr_wepn_l115a4_bb",
     "lsr_wepn_l115a4_bb_ghillie",
     "lsr_lnch_javelin",
-    "lsr_mag_box_762_200rnd",
-    "lsr_mag_box_762_200rnd_tr",
     "lsr_static_javelin_low",
     "lsr_static_l111a1_low",
     "lsr_static_gpmg_low",
