@@ -177,7 +177,12 @@ KPCF_weapons = [
     "greenmag_ammo_9x19_basic_30Rnd",
     "greenmag_ammo_9x19_basic_60Rnd",
     "greenmag_ammo_50BMG_basic_30Rnd",
-    "greenmag_ammo_50BMG_basic_60Rnd",    
+    "greenmag_ammo_50BMG_basic_60Rnd",
+    "GME_556Bandolier",
+    "GME_762Bandolier",
+    "GME_40HEBandolier",
+    "GME_50Bandolier",
+    "GME_338Bandolier",
    //TBD
     "tbd_mortar_81mm_shell_he",
     "tbd_mortar_81mm_shell_illum",
