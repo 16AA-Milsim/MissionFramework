@@ -6,11 +6,11 @@ waitUntil {!isNull player};
 
 // --- EQUIPMENT DISTRIBUTION ---
 
-// If the player wears specific NVGs on their helmet -> move them to their inventory
-if (hmd player == "rhsusf_ANPVS_15") then {
-	player unlinkItem "rhsusf_ANPVS_15";
-	player addItem "rhsusf_ANPVS_15";
-};
+// TEMP DISABLED - If the player wears specific NVGs on their helmet -> move them to their inventory
+// if (hmd player == "rhsusf_ANPVS_15") then {
+// 	player unlinkItem "rhsusf_ANPVS_15";
+// 	player addItem "rhsusf_ANPVS_15";
+// };
 
 // Add tactical glasses to everyone's inventory (not equipped by default)
 if ((roleDescription player) != "Recruit") then {
