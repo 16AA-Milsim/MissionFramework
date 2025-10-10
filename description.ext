@@ -30,7 +30,7 @@ Author = "you";
 
 /*
     ----- Mission Selection Screen -----
-	Edit these
+    Edit these
 */
 
 // Mission name displayed in the mission selection menu.
@@ -46,7 +46,7 @@ overviewText = "16 Air Assault Milsim Community";
 
 /*
     ----- Mission Loading Screen -----
-	You may need to edit these
+    You may need to edit these
 */
 
 // String (usually mission name) shown during mission loading.
@@ -65,7 +65,7 @@ onLoadMission = "16 Air Assault Milsim Community";
 
 /*
     ----- Respawn -----
-	These usually stay the same
+    These usually stay the same
 */
 
 // Enable or disable the respawn button in the menu for INSTANT and BASE respawn types.
@@ -107,7 +107,7 @@ respawnOnStart = -1;
 
 /*
     ----- Corpse & Wreck Management -----
-	Don't edit these
+    Don't edit these
 */
 
 // Sets the mode for corpse removal manager.
@@ -148,7 +148,7 @@ minPlayerDistance = 1000; // meters
 
 /*
     ----- Mission Settings -----
-	Don't edit these
+    Don't edit these
 */
 
 // Allows functions to log to the RPT file.
@@ -174,7 +174,12 @@ disabledAI = 1;
 // 0 - Default behavior, available only in editor
 // 1 - Available in SP and for hosts / logged in admins
 // 2 - Available for everyone
-enableDebugConsole = 1;
+enableDebugConsole[] = {
+    "76561198042251903",    // Mueller
+    "76561198006649815",    // Frederiksen
+    "76561198022993301",    // Hogg
+    "76561198135154430"     // Blue
+};
 
 // Force enable or disable RotorLib flight model.
 // 0 - based on player's options
@@ -200,7 +205,7 @@ unsafeCVL = 1;
 
 /*
     ----- Task Settings -----
-	Don't edit these
+    Don't edit these
 */
 
 // Use new 2D markers on the map.
@@ -223,6 +228,6 @@ taskManagement_drawDist = 5000;
 
 class CfgFunctions
 {
-	#include "taw_vd\cfgfunctions.hpp"
-  	#include "KPCF\KPCF_functions.hpp"
+    #include "taw_vd\cfgfunctions.hpp"
+    #include "KPCF\KPCF_functions.hpp"
 };
