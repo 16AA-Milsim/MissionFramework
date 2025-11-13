@@ -20,7 +20,7 @@ last updated 2025_10_10
      * KPCF_config.sqf
      * KPCF_whitelist.sqf
        and so on
-4. Launch your mission as local multiplayer from the editor and run through the mission checklist found on the wiki.
+4. Launch your mission as local multiplayer from the editor and run through the mission checklist 'zChecklist.md' found in the framework.
 
 ---
 
