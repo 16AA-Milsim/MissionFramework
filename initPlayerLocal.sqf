@@ -61,6 +61,31 @@ if (player getVariable ["16AA_AirCommandChannel", false]) then {
 	}];
 };
 
+// --- ZEUS SPLENDID CAMERA ACCESS ---
+missionNamespace setVariable ["l6AA_fnc_initSplendidCamAceAction", {
+	params [["_unit", player, [objNull]]];
+	if (isNull _unit) exitWith {};
+	if (!local _unit) exitWith {};
+	if (isNil "ace_interact_menu_fnc_createAction") exitWith {};
+	if (_unit getVariable ["l6AA_splendidCamAceAdded", false]) exitWith {};
+
+	private _action = [
+		"l6AA_SplendidCamera",
+		"Open Splendid Camera",
+		"",
+		{ [] call BIS_fnc_camera; },
+		{ !isNull (getAssignedCuratorLogic (_this select 1)) }
+	] call ace_interact_menu_fnc_createAction;
+
+	[_unit, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
+	_unit setVariable ["l6AA_splendidCamAceAdded", true];
+}];
+
+[] spawn {
+	waitUntil { !isNull player };
+	[player] call (missionNamespace getVariable ["l6AA_fnc_initSplendidCamAceAction", {}]);
+};
+
 // Restore access to Air Command Channel and ACE Greenmag setting upon player respawn.
 _player addMPEventHandler ["MPRespawn", {
 	params ["_unit", "_corpse"]; // _unit is the newly respawned player unit.
@@ -73,4 +98,7 @@ _player addMPEventHandler ["MPRespawn", {
 
 	// Restore ACE Greenmag setting on respawn
 	_unit setVariable ["greenmag_main_MagSkillCoef", 0.7, true];
+
+	// Reattach ACE self action on the new body.
+	[_unit] call (missionNamespace getVariable ["l6AA_fnc_initSplendidCamAceAction", {}]);
 }];

@@ -117,7 +117,6 @@ KPCF_weapons = [
     "rhs_weap_fim92",
     "rhs_fim92_mag",
     "rhs_fgm148_magazine_AT",
-    "rhs_mag_maaws_HEAT",
    //UK3CB
     "UK3CB_BAF_L85A3",
     "UK3CB_BAF_556_200Rnd",
