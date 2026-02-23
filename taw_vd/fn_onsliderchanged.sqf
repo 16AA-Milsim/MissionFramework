@@ -10,6 +10,8 @@ private "_varData";
 params [["_mode",-1,[0]],["_value",-1,[0]]];
 
 if(EQUAL(_mode,-1) OR EQUAL(_value,-1)) exitWith {};
+if (missionNamespace getVariable ["tawvd_addon_disable",false]) exitWith {};
+if ([] call TAWVD_fnc_isAceViewDistanceActive) exitWith {};
 
 disableSerialization;
 
@@ -33,3 +35,5 @@ if(tawvd_syncObject) then {
 	sliderSetPosition[OBJECT_SLIDER, tawvd_object];
 	ctrlSetText[OBJECT_EDIT,str(tawvd_object)];
 };
+
+[] call TAWVD_fnc_persistSettingsSafe;

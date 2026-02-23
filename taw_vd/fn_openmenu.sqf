@@ -5,8 +5,15 @@
 	Description:
 	Called via addAction and opens the TAW View Distance Menu
 */
+if (missionNamespace getVariable ["tawvd_addon_disable",false]) exitWith {};
+if ([] call TAWVD_fnc_isAceViewDistanceActive) exitWith {
+	hint "TAW View Distance is disabled while ACE View Distance is active. Set tawvd_allowWithACE = true; to override.";
+};
+
+private _newDisplay = false;
 if(isNull (findDisplay MENU_IDD)) then {
 	if(!createDialog "TAW_VDMenu") exitWith {hint "Something went wrong, the menu won't open?"};
+	_newDisplay = true;
 };
 disableSerialization;
 
@@ -35,7 +42,19 @@ if(tawvd_syncObject) then {
 	ctrlEnable [OBJECT_EDIT,true];
 };
 
-//Lets disable it..
-if(!isNil "tawvd_disablenone") then {
-	ctrlEnable [TERRAIN_NONE,false];
+private _terrainMode = missionNamespace getVariable ["tawvd_terrain",""];
+if !(_terrainMode isEqualType "") then {_terrainMode = "";};
+_terrainMode = toLower _terrainMode;
+if !(_terrainMode in ["none","low","norm","high"]) then {
+	_terrainMode = switch (true) do {
+		case (getTerrainGrid > 40): {"none"};
+		case (getTerrainGrid > 20): {"low"};
+		case (getTerrainGrid > 5): {"norm"};
+		default {"high"};
+	};
+};
+[_terrainMode,true,false] call TAWVD_fnc_onTerrainChanged;
+
+if(_newDisplay) then {
+	[] call TAWVD_fnc_openSaveManager;
 };

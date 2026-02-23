@@ -16,13 +16,7 @@ if(isNil "_saveData") exitWith {};
 
 /* Set variables to chosen slot data */
 CONTROL(MENU_IDD,SLOT_NAME) ctrlSetText (SEL(_saveData,0));
-SVAR_MNS ["tawvd_foot",SEL(_saveData,1)];
-SVAR_MNS ["tawvd_car",SEL(_saveData,2)];
-SVAR_MNS ["tawvd_air",SEL(_saveData,3)];
-SVAR_MNS ["tawvd_drone",SEL(_saveData,4)];
-SVAR_MNS ["tawvd_object",SEL(_saveData,5)];
-SVAR_MNS ["tawvd_syncObject",SEL(_saveData,6)];
+if !([_index] call TAWVD_fnc_applySlot) exitWith {};
 
-/* Update Menu & View Distance */
-[] call TAWVD_fnc_updateViewDistance;
+/* Update Menu */
 [] call TAWVD_fnc_openMenu;
